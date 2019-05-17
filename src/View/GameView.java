@@ -507,7 +507,7 @@ public class GameView {
         {
             return true;
         }
-        
+
 
         else {
             return false;
