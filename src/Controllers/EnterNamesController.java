@@ -9,6 +9,8 @@ import javafx.stage.Stage;
  */
 public class EnterNamesController {
 
+    //Should use/have view instance and player model instance
+
     EnterNamesView enterNamesView = new EnterNamesView();
 
     public Scene getEnterNamesView()
