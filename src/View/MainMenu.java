@@ -10,45 +10,45 @@ import javafx.stage.Stage;
 
 public class MainMenu {
 
-    Scene mainMenuScene;
-    VBox mainMenuVBox = new VBox();
-    TTTButton vsFriendButton = new TTTButton("vs Friend");
-    TTTButton vsComputerButton = new TTTButton("vs Computer");
-    TTTButton creditsButton = new TTTButton("Credits");
-    TTTButton quitButton = new TTTButton("Quit");
-    ImageView logoImage;
+    Scene scnMainMenu;
+    VBox vBoxMainMenu = new VBox();
+    TTTButton btnVsFriend = new TTTButton("vs Friend");
+    TTTButton btnVsComputer = new TTTButton("vs Computer");
+    TTTButton btnCredits = new TTTButton("Credits");
+    TTTButton btnQuit = new TTTButton("Quit");
+    ImageView imgLogo;
 
     public Scene getMainMenu()
     {
-        mainMenuScene = new Scene(mainMenuVBox, 200, 300);
-        mainMenuScene.getStylesheets().add("Resources/Styles/MainMenuStyles.css");
+        scnMainMenu = new Scene(vBoxMainMenu, 200, 300);
+        scnMainMenu.getStylesheets().add("Resources/Styles/MainMenuStyles.css");
 
-        vsFriendButton.getStyleClass().add("main-menu-button");
-        vsComputerButton.getStyleClass().add("main-menu-button");
-        creditsButton.getStyleClass().add("main-menu-button");
-        quitButton.getStyleClass().add("main-menu-button");
+        btnVsFriend.getStyleClass().add("main-menu-button");
+        btnVsComputer.getStyleClass().add("main-menu-button");
+        btnCredits.getStyleClass().add("main-menu-button");
+        btnQuit.getStyleClass().add("main-menu-button");
 
-        mainMenuVBox.getChildren().addAll(logoImage, vsFriendButton, vsComputerButton, creditsButton, quitButton);
+        vBoxMainMenu.getChildren().addAll(imgLogo, btnVsFriend, btnVsComputer, btnCredits, btnQuit);
         this.setButtonsOnAction();
 
-        return mainMenuScene;
+        return scnMainMenu;
     }
 
     public void setButtonsOnAction()
     {
-        vsFriendButton.setOnAction(event -> {
+        btnVsFriend.setOnAction(event -> {
             //ToDO
         });
 
-        vsComputerButton.setOnAction(event -> {
+        btnVsComputer.setOnAction(event -> {
             //ToDo
         });
 
-        creditsButton.setOnAction(event -> {
+        btnCredits.setOnAction(event -> {
             //ToDo
         });
 
-        quitButton.setOnAction(event -> {
+        btnQuit.setOnAction(event -> {
             System.exit(1);
         });
     }
