@@ -1,6 +1,9 @@
 package Controllers;
 
 import Model.TTTButton;
+import View.Gameplay;
+import View.Start;
+import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
@@ -8,9 +11,22 @@ import java.util.List;
 
 public class GameplayController {
 
+    public static GameplayController gameplayController = new GameplayController();
+
+    Gameplay gameplay = new Gameplay();
     PanelController panelController = new PanelController();
 
     public static int turnsCount = 0;
+
+    public void setGameplayToStage()
+    {
+        Start.setSceneToStage(getGameplayScene());
+    }
+
+    public Scene getGameplayScene()
+    {
+        return gameplay.getGameplay();
+    }
 
     public void setSquareButtonsOnAction(List<TTTButton> squareButtons, Image imgX,
                 Image img0, List<TTTButton> listX, List<TTTButton> list0)

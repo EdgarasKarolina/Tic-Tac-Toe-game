@@ -1,5 +1,7 @@
 package View;
 
+import Controllers.GameplayController;
+import Controllers.PanelController;
 import Model.TTTButton;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
@@ -42,8 +44,8 @@ public class Gameplay {
 
     ArrayList<TTTButton> allButtons = new ArrayList<TTTButton>();
 
-    Panel playersPanel = new Panel();
 
+    //Panel playersPanel = new Panel();
 
     public Scene getGameplay()
     {
@@ -51,6 +53,7 @@ public class Gameplay {
         scnGameplay.getStylesheets().add("Resources/Styles/GameplayStyles.css");
 
         setAllSquaresToList();
+        setButtonsOnAction();
         allButtons.forEach(squareButton->squareButton.getStyleClass().add("square-button"));
 
         hBoxFirstLine.getChildren().addAll(btnSquare1, btnSquare2, btnSquare3);
@@ -59,9 +62,14 @@ public class Gameplay {
         vBoxGameplay.getChildren().addAll(hBoxFirstLine, hBoxSecondLine, hBoxThirdLine);
 
         borderPane.setLeft(vBoxGameplay);
-        borderPane.setRight(playersPanel.getPanel());
+        borderPane.setRight(PanelController.panelController.getPanelVBox());
 
         return scnGameplay;
+    }
+
+    public void setButtonsOnAction()
+    {
+        GameplayController.gameplayController.setSquareButtonsOnAction(allButtons, imgWhiteX, imgWhite0, listSquaresX, listSquares0);
     }
 
     public void setAllSquaresToList()

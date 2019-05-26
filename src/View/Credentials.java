@@ -1,5 +1,6 @@
 package View;
 
+import Controllers.GameplayController;
 import Model.TTTButton;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
@@ -27,6 +28,10 @@ public class Credentials {
     TTTButton btnContinue = new TTTButton("Continue");
     TTTButton btnBack = new TTTButton("Go back");
 
+    String msgWarning = "Insert Name";
+
+    //GameplayController gameplayController = new GameplayController();
+
     public Scene getCredentials()
     {
         scnCredentials = new Scene(vBox, 280, 200);
@@ -42,13 +47,39 @@ public class Credentials {
         btnContinue.getStyleClass().add("credentials-button");
         btnBack.getStyleClass().add("credentials-button");
 
+        vBox.getStyleClass().add("credentials-vbox");
+
         hBox.getChildren().addAll(lblPlayer1Name, txtPlayer1Name);
         hBox2.getChildren().addAll(lblPlayer2Name, txtPlayer2Name);
         hBox3.getChildren().addAll( btnBack, btnContinue);
 
         vBox.getChildren().addAll(lblInsertNames, hBox,hBox2, hBox3);
-        vBox.setStyle("-fx-background-color: lightblue");
+        this.setButtonsOnAction();
 
         return scnCredentials;
+    }
+
+    public void setButtonsOnAction()
+    {
+        btnContinue.setOnAction(event -> {
+            if (txtPlayer1Name.getText().trim().equals("") || txtPlayer2Name.getText().trim().equals(""))
+            {
+                txtPlayer1Name.setPromptText(msgWarning);
+                txtPlayer2Name.setPromptText(msgWarning);
+            }
+            else if (txtPlayer1Name.getText().trim().equals(""))
+                txtPlayer1Name.setPromptText(msgWarning);
+
+            else if (txtPlayer2Name.getText().trim().equals(""))
+                txtPlayer2Name.setPromptText(msgWarning);
+
+            else
+                GameplayController.gameplayController.setGameplayToStage();
+                //gameplayController.setGameplayToStage();
+        });
+
+        btnBack.setOnAction(event -> {
+
+        });
     }
 }
