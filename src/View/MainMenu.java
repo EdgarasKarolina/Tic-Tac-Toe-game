@@ -1,12 +1,10 @@
 package View;
 
+import Controllers.CredentialsController;
 import Model.TTTButton;
-import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.VBox;
-import javafx.scene.text.Font;
-import javafx.stage.Stage;
 
 public class MainMenu {
 
@@ -16,17 +14,20 @@ public class MainMenu {
     TTTButton btnVsComputer = new TTTButton("vs Computer");
     TTTButton btnCredits = new TTTButton("Credits");
     TTTButton btnQuit = new TTTButton("Quit");
-    ImageView imgLogo;
+    ImageView imgLogo = new ImageView();
+
+    CredentialsController credentialsController = new CredentialsController();
 
     public Scene getMainMenu()
     {
         scnMainMenu = new Scene(vBoxMainMenu, 200, 300);
-        scnMainMenu.getStylesheets().add("Resources/Styles/MainMenuStyles.css");
+        scnMainMenu.getStylesheets().add("Styles/MainMenuStyles.css");
 
         btnVsFriend.getStyleClass().add("main-menu-button");
         btnVsComputer.getStyleClass().add("main-menu-button");
         btnCredits.getStyleClass().add("main-menu-button");
         btnQuit.getStyleClass().add("main-menu-button");
+        vBoxMainMenu.getStyleClass().add("main-menu-vbox");
 
         vBoxMainMenu.getChildren().addAll(imgLogo, btnVsFriend, btnVsComputer, btnCredits, btnQuit);
         this.setButtonsOnAction();
@@ -37,7 +38,7 @@ public class MainMenu {
     public void setButtonsOnAction()
     {
         btnVsFriend.setOnAction(event -> {
-            //ToDO
+            credentialsController.setCredentialsToStage();
         });
 
         btnVsComputer.setOnAction(event -> {

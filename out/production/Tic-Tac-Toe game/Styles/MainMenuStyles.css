@@ -1,14 +1,14 @@
 .main-menu-button{
-    min-height: 40px;
-    min-width: 130px;
-    font-family: Serif;
-    font-size: 20px;
+    -fx-min-height: 40px;
+    -fx-min-width: 130px;
+    -fx-font-family: Serif;
+    -fx-font-size: 20px;
     -fx-background-color: lightyellow;
     -fx-effect: dropshadow(one-pass-box, black, 15 , 0.0 , 2 , 0)
 }
 
 .main-menu-vbox{
-    alignment: center;
+    -fx-alignment: center;
     -fx-spacing: 20;
     -fx-background-color: lightblue
 }

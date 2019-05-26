@@ -1,0 +1,7 @@
+.square-button{
+    min-height: 133px;
+    min-width: 133px;
+    max-height: 133px;
+    max-width: 133px;
+    -fx-font: 50 arial; -fx-base: #FFFFFF;
+}
