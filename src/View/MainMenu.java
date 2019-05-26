@@ -21,7 +21,7 @@ public class MainMenu {
     public Scene getMainMenu()
     {
         scnMainMenu = new Scene(vBoxMainMenu, 200, 300);
-        scnMainMenu.getStylesheets().add("Styles/MainMenuStyles.css");
+        scnMainMenu.getStylesheets().add("Resources/Styles/MainMenuStyles.css");
 
         btnVsFriend.getStyleClass().add("main-menu-button");
         btnVsComputer.getStyleClass().add("main-menu-button");
