@@ -17,4 +17,14 @@ public class CredentialsController {
     {
         return credentials.getCredentials();
     }
+
+    public String getPlayer1Name()
+    {
+        return credentials.getPlayer1Name();
+    }
+
+    public String getPlayer2Name()
+    {
+        return credentials.getPlayer2Name();
+    }
 }

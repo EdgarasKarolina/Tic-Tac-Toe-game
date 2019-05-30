@@ -22,8 +22,8 @@ public class Credentials {
     Label lblPlayer1Name = new Label("Player 1 name");
     Label lblPlayer2Name = new Label("Player 2 name");
 
-    TextField txtPlayer1Name = new TextField();
-    TextField txtPlayer2Name = new TextField();
+    static TextField txtPlayer1Name = new TextField();
+    static TextField txtPlayer2Name = new TextField();
 
     TTTButton btnContinue = new TTTButton("Continue");
     TTTButton btnBack = new TTTButton("Go back");
@@ -75,11 +75,20 @@ public class Credentials {
 
             else
                 GameplayController.gameplayController.setGameplayToStage();
-                //gameplayController.setGameplayToStage();
         });
 
         btnBack.setOnAction(event -> {
 
         });
+    }
+
+    public String getPlayer1Name()
+    {
+        return  txtPlayer1Name.getText();
+    }
+
+    public String getPlayer2Name()
+    {
+        return  txtPlayer2Name.getText();
     }
 }
