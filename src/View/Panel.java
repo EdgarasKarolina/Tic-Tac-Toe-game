@@ -16,7 +16,7 @@ public class Panel {
     Label lblPlayer2Name = new Label();
     Label lblX = new Label();
     Label lblO = new Label();
-    Label lblPlayersTurn = new Label();
+    public static Label lblPlayersTurn = new Label();
 
     VBox vBoxDialogBox = new VBox();
     HBox hBox1 = new HBox();
@@ -32,6 +32,7 @@ public class Panel {
         btnReturn.getStyleClass().add("panel-button");
         btnQuit.getStyleClass().add("panel-button");
 
+        lblPlayersTurn.getStyleClass().add("turn-label");
         lblPlayer1Name.getStyleClass().add("name-label");
         lblPlayer2Name.getStyleClass().add("name-label");
         lblX.getStyleClass().add("name-label");
@@ -47,6 +48,23 @@ public class Panel {
 
         vBoxDialogBox.getChildren().addAll( lblPlayersTurn, hBox1, hBox2, btnRestart, btnReturn, btnQuit);
 
+        this.setButtonsOnAction();
+
         return vBoxDialogBox;
+    }
+
+    public void setButtonsOnAction()
+    {
+        btnRestart.setOnAction(event -> {
+            //ToDo
+        });
+
+        btnReturn.setOnAction(event -> {
+            //ToDo
+        });
+
+        btnQuit.setOnAction(event -> {
+            System.exit(1);
+        });
     }
 }

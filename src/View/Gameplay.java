@@ -23,15 +23,15 @@ public class Gameplay {
     HBox hBoxSecondLine = new HBox();
     HBox hBoxThirdLine = new HBox();
 
-    TTTButton btnSquare1 = new TTTButton();
-    TTTButton btnSquare2 = new TTTButton();
-    TTTButton btnSquare3 = new TTTButton();
-    TTTButton btnSquare4 = new TTTButton();
-    TTTButton btnSquare5 = new TTTButton();
-    TTTButton btnSquare6 = new TTTButton();
-    TTTButton btnSquare7 = new TTTButton();
-    TTTButton btnSquare8 = new TTTButton();
-    TTTButton btnSquare9 = new TTTButton();
+    public static TTTButton btnSquare1 = new TTTButton();
+    public static TTTButton btnSquare2 = new TTTButton();
+    public static TTTButton btnSquare3 = new TTTButton();
+    public static TTTButton btnSquare4 = new TTTButton();
+    public static TTTButton btnSquare5 = new TTTButton();
+    public static TTTButton btnSquare6 = new TTTButton();
+    public static TTTButton btnSquare7 = new TTTButton();
+    public static TTTButton btnSquare8 = new TTTButton();
+    public static TTTButton btnSquare9 = new TTTButton();
 
 
     static ArrayList<TTTButton> listSquaresX = new ArrayList<>();
@@ -42,7 +42,7 @@ public class Gameplay {
     Image imgBlackX = new Image(getClass().getResourceAsStream("x_black.png"));
     Image imgBlack0 = new Image(getClass().getResourceAsStream("o_black.png"));
 
-    ArrayList<TTTButton> allButtons = new ArrayList<TTTButton>();
+    public static ArrayList<TTTButton> allButtons = new ArrayList<TTTButton>();
 
 
     //Panel playersPanel = new Panel();
@@ -69,7 +69,7 @@ public class Gameplay {
 
     public void setButtonsOnAction()
     {
-        GameplayController.gameplayController.setSquareButtonsOnAction(allButtons, imgWhiteX, imgWhite0, listSquaresX, listSquares0);
+        GameplayController.gameplayController.setSquareButtonsOnAction(allButtons, imgWhiteX, imgWhite0, imgBlackX, imgBlack0, listSquaresX, listSquares0);
     }
 
     public void setAllSquaresToList()
@@ -83,5 +83,11 @@ public class Gameplay {
         allButtons.add(btnSquare7);
         allButtons.add(btnSquare8);
         allButtons.add(btnSquare9);
+    }
+
+    public static void disableSquareButtons()
+    {
+        for(TTTButton button : allButtons)
+            button.setDisable(true);
     }
 }

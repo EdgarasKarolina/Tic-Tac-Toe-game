@@ -14,8 +14,8 @@ public class PanelController {
         return panel.getPanel();
     }
 
-    public void setWhoseTurnToPlayLabel()
+    public void setWhoseTurnToPlayLabel(String name)
     {
-
+        Panel.lblPlayersTurn.setText(name);
     }
 }

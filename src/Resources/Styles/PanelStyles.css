@@ -21,6 +21,19 @@
     -fx-border-color: darkturquoise;
 }
 
+.turn-label{
+    -fx-min-height: 60px;
+    -fx-min-width: 170px;
+    -fx-max-height: 60px;
+    -fx-max-width: 170px;
+    -fx-font-family: Serif Bold;
+    -fx-font-size: 20px;
+    -fx-alignment: center;
+    -fx-border-color: darkturquoise;
+    -fx-background-color: lightblue;
+    -fx-border-style: solid;
+}
+
 .panel-vbox{
     -fx-spacing: 15;
 }
