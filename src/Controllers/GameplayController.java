@@ -126,17 +126,17 @@ public class GameplayController {
             return combination1;
         else if (squareButtons.containsAll(combination2))
             return combination2;
-        else if (squareButtons.containsAll(combination2))
+        else if (squareButtons.containsAll(combination3))
             return combination3;
-        else if (squareButtons.containsAll(combination2))
+        else if (squareButtons.containsAll(combination4))
             return combination4;
-        else if (squareButtons.containsAll(combination2))
+        else if (squareButtons.containsAll(combination5))
             return combination5;
-        else if (squareButtons.containsAll(combination2))
+        else if (squareButtons.containsAll(combination6))
             return combination6;
-        else if (squareButtons.containsAll(combination2))
+        else if (squareButtons.containsAll(combination7))
             return combination7;
-        else if (squareButtons.containsAll(combination2))
+        else if (squareButtons.containsAll(combination8))
             return combination8;
         else return emptyList;
     }
@@ -148,17 +148,17 @@ public class GameplayController {
             return combination1;
         else if (squareButtons.containsAll(combination2))
             return combination2;
-        else if (squareButtons.containsAll(combination2))
+        else if (squareButtons.containsAll(combination3))
             return combination3;
-        else if (squareButtons.containsAll(combination2))
+        else if (squareButtons.containsAll(combination4))
             return combination4;
-        else if (squareButtons.containsAll(combination2))
+        else if (squareButtons.containsAll(combination5))
             return combination5;
-        else if (squareButtons.containsAll(combination2))
+        else if (squareButtons.containsAll(combination6))
             return combination6;
-        else if (squareButtons.containsAll(combination2))
+        else if (squareButtons.containsAll(combination7))
             return combination7;
-        else if (squareButtons.containsAll(combination2))
+        else if (squareButtons.containsAll(combination8))
             return combination8;
         else return emptyList;
     }

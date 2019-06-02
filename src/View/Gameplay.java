@@ -38,8 +38,10 @@ public class Gameplay {
     static ArrayList<TTTButton> listSquares0 = new ArrayList<>();
 
     Image imgWhiteX = new Image(getClass().getResourceAsStream("x.png"));
+    //Image imgWhiteX = new Image(getClass().getResourceAsStream(""),100, 100, false, false);
     Image imgWhite0 = new Image(getClass().getResourceAsStream("o.png"));
     Image imgBlackX = new Image(getClass().getResourceAsStream("x_black.png"));
+    //Image imgBlackX = new Image(getClass().getResourceAsStream(""),100, 100, false, false);
     Image imgBlack0 = new Image(getClass().getResourceAsStream("o_black.png"));
 
     public static ArrayList<TTTButton> allButtons = new ArrayList<TTTButton>();
