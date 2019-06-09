@@ -1,6 +1,7 @@
 package View;
 
 import Controllers.GameplayController;
+import Controllers.PanelController;
 import Model.TTTButton;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
@@ -29,8 +30,6 @@ public class Credentials {
     TTTButton btnBack = new TTTButton("Go back");
 
     String msgWarning = "Insert Name";
-
-    //GameplayController gameplayController = new GameplayController();
 
     public Scene getCredentials()
     {
@@ -75,6 +74,12 @@ public class Credentials {
 
             else
                 GameplayController.gameplayController.setGameplayToStage();
+                GameplayController.gameplayController.ClearSquareButtons();
+
+                if (GameplayController.turnsCount % 2 == 0)
+                    PanelController.panelController.setWhoseTurnToPlayLabel(getPlayer1Name() + " turn");
+                else
+                    PanelController.panelController.setWhoseTurnToPlayLabel(getPlayer2Name() + " turn");
         });
 
         btnBack.setOnAction(event -> {

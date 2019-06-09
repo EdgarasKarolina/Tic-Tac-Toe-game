@@ -162,4 +162,15 @@ public class GameplayController {
             return combination8;
         else return emptyList;
     }
+
+    public void ClearSquareButtons()
+    {
+        Gameplay.listSquaresX.clear();
+        Gameplay.listSquares0.clear();
+    }
+
+    public int getTurnsCount()
+    {
+        return turnsCount;
+    }
 }
