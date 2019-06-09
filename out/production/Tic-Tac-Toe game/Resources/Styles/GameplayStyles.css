@@ -3,5 +3,8 @@
     -fx-min-width: 133px;
     -fx-max-height: 133px;
     -fx-max-width: 133px;
-    -fx-font: 50 arial; -fx-base: #FFFFFF;
+    -fx-font: 50 arial;
+    -fx-border-color: #C0C0C0;
+    -fx-border-width: 2px;
+    -fx-background-color: #FFFFFF;
 }
