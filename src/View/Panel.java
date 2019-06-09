@@ -15,8 +15,6 @@ public class Panel {
 
     Label lblPlayer1Name = new Label();
     Label lblPlayer2Name = new Label();
-    Label lblX = new Label();
-    Label lblO = new Label();
     public static Label lblPlayersTurn = new Label();
 
     VBox vBoxDialogBox = new VBox();
@@ -24,7 +22,6 @@ public class Panel {
     HBox hBox2 = new HBox();
 
     CredentialsController credentialsController = new CredentialsController();
-    static Start start = new Start();
 
     public VBox getPanel()
     {
@@ -37,16 +34,14 @@ public class Panel {
         lblPlayersTurn.getStyleClass().add("turn-label");
         lblPlayer1Name.getStyleClass().add("name-label");
         lblPlayer2Name.getStyleClass().add("name-label");
-        lblX.getStyleClass().add("name-label");
-        lblO.getStyleClass().add("name-label");
 
         vBoxDialogBox.getStyleClass().add("panel-vbox");
 
         lblPlayer1Name.setText("Player1: " + credentialsController.getPlayer1Name());
         lblPlayer2Name.setText("Player2: " + credentialsController.getPlayer2Name());
 
-        hBox1.getChildren().addAll(lblPlayer1Name, lblX);
-        hBox2.getChildren().addAll(lblPlayer2Name, lblO);
+        hBox1.getChildren().addAll(lblPlayer1Name);
+        hBox2.getChildren().addAll(lblPlayer2Name);
 
         vBoxDialogBox.getChildren().addAll( lblPlayersTurn, hBox1, hBox2, btnRestart, btnReturn, btnQuit);
 
@@ -58,7 +53,7 @@ public class Panel {
     public void setButtonsOnAction()
     {
         btnRestart.setOnAction(event -> {
-            //ToDo
+
         });
 
         btnReturn.setOnAction(event -> {

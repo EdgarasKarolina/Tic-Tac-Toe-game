@@ -14,7 +14,7 @@ import java.util.ArrayList;
 
 public class Gameplay {
 
-    BorderPane borderPane = new BorderPane();
+    BorderPane borderPane;
 
     Scene scnGameplay;
 
@@ -47,6 +47,7 @@ public class Gameplay {
 
     public Scene getGameplay()
     {
+        borderPane = new BorderPane();
         scnGameplay = new Scene(borderPane, 580, 420);
         scnGameplay.getStylesheets().add("Resources/Styles/GameplayStyles.css");
 

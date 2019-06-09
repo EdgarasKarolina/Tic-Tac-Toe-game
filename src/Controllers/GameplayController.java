@@ -207,4 +207,9 @@ public class GameplayController {
     {
         panelController.setWhoseTurnToPlayLabel(credentialsController.getPlayer2Name() + " turn");
     }
+
+    public Scene getGameViewStage()
+    {
+        return gameplay.getGameplay();
+    }
 }

@@ -1,5 +1,6 @@
 package View;
 
+import Controllers.GameplayController;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
@@ -8,6 +9,7 @@ public class Start extends Application {
 
     static Stage stgMainStage = new Stage();
     MainMenu mainMenu = new MainMenu();
+    GameplayController gameplayController = new GameplayController();
 
     @Override
     public void start(Stage primaryStage) throws Exception {
@@ -22,8 +24,4 @@ public class Start extends Application {
         stgMainStage.setScene(scene);
     }
 
-    public void setMainSceneToStage()
-    {
-        stgMainStage.setScene(mainMenu.getMainMenu());
-    }
 }

@@ -4,10 +4,10 @@
     <list default="true" id="11129068-b89c-497e-8a7e-db81bab70c53" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Tic-Tac-Toe game/Controllers/GameplayController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tic-Tac-Toe game/Controllers/GameplayController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Tic-Tac-Toe game/View/Credentials.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tic-Tac-Toe game/View/Credentials.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Tic-Tac-Toe game/View/Gameplay.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tic-Tac-Toe game/View/Gameplay.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Tic-Tac-Toe game/View/Panel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tic-Tac-Toe game/View/Panel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Tic-Tac-Toe game/View/Start.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tic-Tac-Toe game/View/Start.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controllers/GameplayController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/GameplayController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/Credentials.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/Credentials.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/View/Gameplay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/Gameplay.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/View/Panel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/Panel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/View/Start.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/Start.java" afterDir="false" />
@@ -31,14 +31,36 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Start.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/View/Start.java">
+      <file leaf-file-name="PlayersDialogBoxView.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/View/PlayersDialogBoxView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="233">
-              <caret line="15" column="41" lean-forward="true" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="41" />
+            <state relative-caret-position="238">
+              <caret line="123" column="29" lean-forward="true" selection-start-line="123" selection-start-column="29" selection-end-line="123" selection-end-column="29" />
+              <folding>
+                <element signature="e#7151#7152#0" expanded="true" />
+                <element signature="e#7236#7237#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Panel.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/View/Panel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="33" column="57" lean-forward="true" selection-start-line="33" selection-start-column="57" selection-end-line="33" selection-end-column="57" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PanelStyles.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Resources/Styles/PanelStyles.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="261">
+              <caret line="33" column="28" lean-forward="true" selection-start-line="33" selection-start-column="28" selection-end-line="33" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -63,7 +85,6 @@
         <option value="$PROJECT_DIR$/src/View/Test.java" />
         <option value="$PROJECT_DIR$/src/Controllers/GameViewController.java" />
         <option value="$PROJECT_DIR$/src/Model/GameViewModel.java" />
-        <option value="$PROJECT_DIR$/src/View/PlayersDialogBoxView.java" />
         <option value="$PROJECT_DIR$/src/View/EnterNamesView.java" />
         <option value="$PROJECT_DIR$/src/View/GameView.java" />
         <option value="$PROJECT_DIR$/src/Model/Player.java" />
@@ -76,18 +97,19 @@
         <option value="$PROJECT_DIR$/src/Model/Game.java" />
         <option value="$PROJECT_DIR$/src/Styles/MainMenuStyles.css" />
         <option value="$PROJECT_DIR$/src/Resources/Styles/CredentialsStyles.css" />
-        <option value="$PROJECT_DIR$/src/Resources/Styles/PanelStyles.css" />
         <option value="$PROJECT_DIR$/src/Controllers/PanelController.java" />
         <option value="$PROJECT_DIR$/src/Resources/Styles/GameplayStyles.css" />
         <option value="$PROJECT_DIR$/src/Controllers/CredentialsController.java" />
-        <option value="$PROJECT_DIR$/src/Controllers/GameplayController.java" />
         <option value="$PROJECT_DIR$/src/Controllers/StartController.java" />
         <option value="$PROJECT_DIR$/src/View/MainMenu.java" />
-        <option value="$PROJECT_DIR$/src/View/Gameplay.java" />
         <option value="$PROJECT_DIR$/src/Controllers/MainMenuController.java" />
         <option value="$PROJECT_DIR$/src/View/Credentials.java" />
-        <option value="$PROJECT_DIR$/src/View/Panel.java" />
+        <option value="$PROJECT_DIR$/src/View/Gameplay.java" />
+        <option value="$PROJECT_DIR$/src/Controllers/GameplayController.java" />
         <option value="$PROJECT_DIR$/src/View/Start.java" />
+        <option value="$PROJECT_DIR$/src/Resources/Styles/PanelStyles.css" />
+        <option value="$PROJECT_DIR$/src/View/PlayersDialogBoxView.java" />
+        <option value="$PROJECT_DIR$/src/View/Panel.java" />
       </list>
     </option>
   </component>
@@ -130,6 +152,12 @@
               <item name="Tic-Tac-Toe-game" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Tic-Tac-Toe-game" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Tic-Tac-Toe-game" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Styles" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Tic-Tac-Toe-game" type="b2602c69:ProjectViewProjectNode" />
@@ -661,12 +689,12 @@
       <workItem from="1559220930360" duration="8476000" />
       <workItem from="1559393677105" duration="8584000" />
       <workItem from="1559488772664" duration="5071000" />
-      <workItem from="1560072223696" duration="24416000" />
+      <workItem from="1560072223696" duration="26970000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="206650000" />
+    <option name="totallyTimeSpent" value="209204000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -687,18 +715,18 @@
       <window_info id="Palette&#9;" order="5" />
       <window_info id="Image Layers" order="6" />
       <window_info anchor="right" id="Capture Analysis" order="7" />
-      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.51119405" side_tool="true" visible="true" weight="0.44581005" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5117271" side_tool="true" visible="true" weight="0.44581005" />
       <window_info anchor="right" id="Maven Projects" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="10" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.48880598" visible="true" weight="0.44581005" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.48827294" visible="true" weight="0.44581005" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.21531631" />
       <window_info id="Capture Tool" order="3" />
       <window_info anchor="right" id="Designer" order="4" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25266525" />
       <window_info anchor="bottom" id="Statistic" order="7" />
       <window_info anchor="right" id="Database" order="5" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.510661" weight="0.21452513" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.5101279" weight="0.21452513" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
@@ -794,17 +822,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controllers/GameViewController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="15" column="31" lean-forward="true" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="36" />
-          <folding>
-            <element signature="e#260#261#0" expanded="true" />
-            <element signature="e#306#307#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Resources/Styles/MainMenuStyles.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -816,13 +833,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="24" column="30" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Resources/Styles/PanelStyles.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="34" column="1" lean-forward="true" selection-start-line="34" selection-start-column="1" selection-end-line="34" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -959,19 +969,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/GameView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="26" column="36" lean-forward="true" selection-start-line="26" selection-start-column="36" selection-end-line="26" selection-end-column="36" />
-          <folding>
-            <element signature="e#11227#11228#0" expanded="true" />
-            <element signature="e#11271#11272#0" expanded="true" />
-            <element signature="e#11313#11314#0" expanded="true" />
-            <element signature="e#11350#11351#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Controllers/PanelController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -1012,17 +1009,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/PlayersDialogBoxView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="93" column="32" lean-forward="true" selection-start-line="93" selection-start-column="22" selection-end-line="93" selection-end-column="41" />
-          <folding>
-            <element signature="e#7151#7152#0" expanded="true" />
-            <element signature="e#7236#7237#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/View/MainMenu.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -1040,50 +1026,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/Gameplay.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="57" column="80" lean-forward="true" selection-start-line="57" selection-start-column="80" selection-end-line="57" selection-end-column="80" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/Credentials.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="91">
-          <caret line="76" column="75" lean-forward="true" selection-start-line="76" selection-start-column="75" selection-end-line="76" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controllers/GameplayController.java">
+    <entry file="file://$PROJECT_DIR$/src/Controllers/GameViewController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
-          <caret line="47" column="38" lean-forward="true" selection-start-line="47" selection-start-column="38" selection-end-line="47" selection-end-column="38" />
+          <caret line="15" column="33" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="36" />
           <folding>
-            <element signature="e#2012#2013#0" expanded="true" />
-            <element signature="e#2069#2070#0" expanded="true" />
-            <element signature="e#2112#2113#0" expanded="true" />
-            <element signature="e#2157#2158#0" expanded="true" />
+            <element signature="e#260#261#0" expanded="true" />
+            <element signature="e#306#307#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/Panel.java">
+    <entry file="file://$PROJECT_DIR$/src/View/GameView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="53" lean-forward="true" selection-start-line="53" selection-end-line="53" />
+        <state relative-caret-position="1462">
+          <caret line="130" column="29" selection-start-line="130" selection-start-column="15" selection-end-line="130" selection-end-column="29" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#11227#11228#0" expanded="true" />
+            <element signature="e#11271#11272#0" expanded="true" />
+            <element signature="e#11313#11314#0" expanded="true" />
+            <element signature="e#11350#11351#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/View/StartMenu.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="81" column="61" lean-forward="true" selection-start-line="81" selection-start-column="61" selection-end-line="81" selection-end-column="61" />
+        <state relative-caret-position="244">
+          <caret line="99" column="39" lean-forward="true" selection-start-line="99" selection-start-column="39" selection-end-line="99" selection-end-column="39" />
           <folding>
             <element signature="e#2962#2963#0" expanded="true" />
             <element signature="e#3035#3036#0" expanded="true" />
@@ -1095,8 +1065,68 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/View/Start.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="15" column="41" lean-forward="true" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="41" />
+        <state relative-caret-position="312">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/Gameplay.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="43">
+          <caret line="47" column="21" selection-start-line="47" selection-start-column="17" selection-end-line="47" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/Credentials.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controllers/GameplayController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="19" column="84" lean-forward="true" selection-start-line="19" selection-start-column="84" selection-end-line="19" selection-end-column="84" />
+          <folding>
+            <element signature="e#2012#2013#0" expanded="true" />
+            <element signature="e#2069#2070#0" expanded="true" />
+            <element signature="e#2112#2113#0" expanded="true" />
+            <element signature="e#2157#2158#0" expanded="true" />
+            <element signature="e#8080#8081#0" expanded="true" />
+            <element signature="e#8126#8127#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Resources/Styles/PanelStyles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="33" column="28" lean-forward="true" selection-start-line="33" selection-start-column="28" selection-end-line="33" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/PlayersDialogBoxView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="123" column="29" lean-forward="true" selection-start-line="123" selection-start-column="29" selection-end-line="123" selection-end-column="29" />
+          <folding>
+            <element signature="e#7151#7152#0" expanded="true" />
+            <element signature="e#7236#7237#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/Panel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="33" column="57" lean-forward="true" selection-start-line="33" selection-start-column="57" selection-end-line="33" selection-end-column="57" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
