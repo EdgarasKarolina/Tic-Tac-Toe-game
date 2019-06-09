@@ -1,6 +1,7 @@
 package View;
 
 import Controllers.GameplayController;
+import Controllers.MainMenuController;
 import Controllers.PanelController;
 import Model.TTTButton;
 import javafx.scene.Scene;
@@ -75,15 +76,16 @@ public class Credentials {
             else
                 GameplayController.gameplayController.setGameplayToStage();
                 GameplayController.gameplayController.ClearSquareButtons();
+                GameplayController.gameplayController.setRandomTurnsCounter();
 
                 if (GameplayController.turnsCount % 2 == 0)
-                    PanelController.panelController.setWhoseTurnToPlayLabel(getPlayer1Name() + " turn");
+                    GameplayController.gameplayController.player1Starts();
                 else
-                    PanelController.panelController.setWhoseTurnToPlayLabel(getPlayer2Name() + " turn");
+                    GameplayController.gameplayController.player2Starts();
         });
 
         btnBack.setOnAction(event -> {
-
+            MainMenuController.mainMenuController.setMainMenuToStage();
         });
     }
 

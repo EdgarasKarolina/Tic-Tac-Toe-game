@@ -43,9 +43,7 @@ public class Gameplay {
     Image imgBlack0 = new Image(getClass().getResourceAsStream("0signBlack.png"));
 
     public static ArrayList<TTTButton> allButtons = new ArrayList<TTTButton>();
-
-
-    //Panel playersPanel = new Panel();
+    public static ArrayList<TTTButton> gameplayButtons = new ArrayList<TTTButton>();
 
     public Scene getGameplay()
     {
@@ -69,7 +67,7 @@ public class Gameplay {
 
     public void setButtonsOnAction()
     {
-        GameplayController.gameplayController.setSquareButtonsOnAction(allButtons, imgWhiteX, imgWhite0, imgBlackX, imgBlack0, listSquaresX, listSquares0);
+        GameplayController.gameplayController.setSquareButtonsOnAction(allButtons, imgWhiteX, imgWhite0, imgBlackX, imgBlack0, gameplayButtons, listSquaresX, listSquares0);
     }
 
     public void setAllSquaresToList()

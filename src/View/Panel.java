@@ -1,6 +1,7 @@
 package View;
 
 import Controllers.CredentialsController;
+import Controllers.MainMenuController;
 import Model.TTTButton;
 import javafx.scene.control.Label;
 import javafx.scene.layout.HBox;
@@ -23,6 +24,7 @@ public class Panel {
     HBox hBox2 = new HBox();
 
     CredentialsController credentialsController = new CredentialsController();
+    static Start start = new Start();
 
     public VBox getPanel()
     {
@@ -60,7 +62,7 @@ public class Panel {
         });
 
         btnReturn.setOnAction(event -> {
-            //ToDo
+            MainMenuController.mainMenuController.setMainMenuToStage();
         });
 
         btnQuit.setOnAction(event -> {

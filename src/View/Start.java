@@ -12,6 +12,7 @@ public class Start extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
 
+        stgMainStage.setResizable(false);
         stgMainStage.setScene(mainMenu.getMainMenu());
         stgMainStage.show();
     }
@@ -19,5 +20,10 @@ public class Start extends Application {
     public static void setSceneToStage(Scene scene)
     {
         stgMainStage.setScene(scene);
+    }
+
+    public void setMainSceneToStage()
+    {
+        stgMainStage.setScene(mainMenu.getMainMenu());
     }
 }

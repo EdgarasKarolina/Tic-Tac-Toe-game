@@ -10,6 +10,7 @@ import javafx.scene.image.ImageView;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Random;
 
 public class GameplayController {
 
@@ -44,6 +45,7 @@ public class GameplayController {
     PanelController panelController = new PanelController();
 
     public static int turnsCount = 0;
+    public static int winnerCount = 0;
 
     public void setGameplayToStage()
     {
@@ -56,28 +58,35 @@ public class GameplayController {
     }
 
     public void setSquareButtonsOnAction(ArrayList<TTTButton> squareButtons, Image imgX,
-                Image img0, Image imgXBlack, Image img0Black, ArrayList<TTTButton> listX, ArrayList<TTTButton> list0)
+                Image img0, Image imgXBlack, Image img0Black, ArrayList<TTTButton> allList, ArrayList<TTTButton> listX, ArrayList<TTTButton> list0)
     {
         for (TTTButton button : squareButtons)
-            button.setOnAction(event -> squareButtonsAction(button, imgX, img0, imgXBlack, img0Black, listX, list0));
+            button.setOnAction(event -> squareButtonsAction(button, imgX, img0, imgXBlack, img0Black, allList, listX, list0));
     }
 
     public void squareButtonsAction(TTTButton squareButton, Image imgX, Image img0, Image imgXBlack, Image img0Black,
-                    ArrayList<TTTButton> listX, ArrayList<TTTButton> list0)
+                                    ArrayList<TTTButton> allList,ArrayList<TTTButton> listX, ArrayList<TTTButton> list0)
 
     {
+        setButtonToLIst(squareButton,allList);
         turnsCount++;
         if (turnsCount % 2 == 0)
         {
             setXonButton(squareButton, imgX, listX);
-            checkIfXWon(listX, imgXBlack);
-            panelController.setWhoseTurnToPlayLabel(credentialsController.getPlayer1Name() + " turn");
+            checkIfXWon(listX, allList, imgXBlack);
+            if (winnerCount == 1)
+                panelController.setWhoseTurnToPlayLabel(credentialsController.getPlayer2Name() + " has won");
+            else
+                panelController.setWhoseTurnToPlayLabel(credentialsController.getPlayer1Name() + " turn");
         }
         else
         {
             setOonButton(squareButton, img0, list0);
-            checkIf0Won(list0, img0Black);
-            panelController.setWhoseTurnToPlayLabel(credentialsController.getPlayer2Name() + " turn");
+            checkIf0Won(list0, allList, img0Black);
+            if (winnerCount == 2)
+                panelController.setWhoseTurnToPlayLabel(credentialsController.getPlayer1Name() + " has won");
+            else
+                panelController.setWhoseTurnToPlayLabel(credentialsController.getPlayer2Name() + " turn");
         }
     }
 
@@ -93,29 +102,43 @@ public class GameplayController {
         list.add(button);
     }
 
-    public void checkIfXWon(ArrayList<TTTButton> squareButtons, Image imgXBlack)
+    public void setButtonToLIst(TTTButton button, List<TTTButton> list) {
+        list.add(button);
+    }
+
+    public void checkIfXWon(ArrayList<TTTButton> squareXButtons, ArrayList<TTTButton> allSquareButtons, Image imgXBlack)
     {
-        if (getWinningSquareButtonsX(squareButtons).size() == 3)
+        if (getWinningSquareButtonsX(squareXButtons).size() != 3 && allSquareButtons.size() == 9)
+        {
+            panelController.setWhoseTurnToPlayLabel("Draw");
+        }
+        else if (getWinningSquareButtonsX(squareXButtons).size() == 3)
         {
             ArrayList<TTTButton> buttons;
-            buttons = getWinningSquareButtonsX(squareButtons);
+            buttons = getWinningSquareButtonsX(squareXButtons);
             for(TTTButton button : buttons)
                 button.setGraphic(new ImageView(imgXBlack));
 
             Gameplay.disableSquareButtons();
+            winnerCount = 1;
         }
     }
 
-    public void checkIf0Won(ArrayList<TTTButton> squareButtons, Image img0Black)
+    public void checkIf0Won(ArrayList<TTTButton> square0Buttons, ArrayList<TTTButton> allSquareButtons, Image img0Black)
     {
-        ArrayList<TTTButton> buttons = new ArrayList<>();
-        if (getWinningSquareButtons0(squareButtons).size() == 3)
+        if (getWinningSquareButtons0(square0Buttons).size() != 0 && allSquareButtons.size() == 9)
         {
-            buttons = getWinningSquareButtons0(squareButtons);
+            panelController.setWhoseTurnToPlayLabel("Draw");
+        }
+        else if (getWinningSquareButtons0(square0Buttons).size() == 3)
+        {
+            ArrayList<TTTButton> buttons = new ArrayList<>();
+            buttons = getWinningSquareButtons0(square0Buttons);
             for(TTTButton button : buttons)
                 button.setGraphic(new ImageView(img0Black));
 
             Gameplay.disableSquareButtons();
+            winnerCount = 2;
         }
     }
 
@@ -169,8 +192,19 @@ public class GameplayController {
         Gameplay.listSquares0.clear();
     }
 
-    public int getTurnsCount()
+    public void setRandomTurnsCounter()
     {
-        return turnsCount;
+        Random random = new Random();
+        turnsCount = random.nextInt(2);
+    }
+
+    public void player1Starts()
+    {
+        panelController.setWhoseTurnToPlayLabel(credentialsController.getPlayer1Name() + " turn");
+    }
+
+    public void player2Starts()
+    {
+        panelController.setWhoseTurnToPlayLabel(credentialsController.getPlayer2Name() + " turn");
     }
 }
