@@ -58,7 +58,7 @@ public class EnterNamesView {
         txtPlayer1Name.getStyleClass().add("name-text-field");
         txtPlayer2Name.getStyleClass().add("name-text-field");
 
-        
+
         btnContinue.getStyleClass().add("credentials-button");
         btnBack.getStyleClass().add("credentials-button");
 

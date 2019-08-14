@@ -6,90 +6,76 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.VBox;
-import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
 import Controllers.GameViewController;
 import Controllers.EnterNamesController;
 
-/**
- * Created by Edgaras on 15/07/2016.
- */
+
 public class StartMenu extends Application {
 
+    Button btnVsFriend = new Button("vs Friend");
+    Button btnVsComputer = new Button("vs Computer");
+    Button btnCredits = new Button("Credits");
+    Button btnQuit = new Button("Quit");
+
+    VBox vBoxMainMenu = new VBox();
+
+    ImageView imgLogo = new ImageView();
+
     static Stage mainStage;
-    Scene mainScene;
-    VBox mainVBox;
-    Button vsFriendButton;
-    Button vsComputerButton;
-    Button creditsButton;
-    Button quitButton;
-    ImageView logoImage;
+    Scene scnMainMenu;
 
     GameViewController gameViewController = new GameViewController();
     EnterNamesController enterNamesController = new EnterNamesController();
 
-
-
     @Override
-    public void start(Stage primaryStage) throws Exception {
-
-
-
+    public void start(Stage primaryStage) throws Exception
+    {
         mainStage = new Stage();
-        mainStage.setScene(getMainScene());
+        mainStage.setScene(getScnMainMenu());
         mainStage.show();
-
     }
 
-    public Scene getMainScene()
+    public Scene getScnMainMenu()
     {
+        scnMainMenu = new Scene(vBoxMainMenu, 200, 300);
 
-        logoImage = new ImageView();
+        btnVsFriend.getStyleClass().add("main-menu-button");
+        btnVsComputer.getStyleClass().add("main-menu-button");
+        btnCredits.getStyleClass().add("main-menu-button");
+        btnQuit.getStyleClass().add("main-menu-button");
+        vBoxMainMenu.getStyleClass().add("main-menu-vbox");
 
-        //buttons
-        vsFriendButton = new Button("vs Friend");
-        vsFriendButton.setStyle("-fx-background-color: lightyellow");
-        vsFriendButton.setMinSize(130, 40);
-        vsFriendButton.setFont(Font.font ("Serif", 20));
-        vsFriendButton.setStyle("-fx-effect: dropshadow(one-pass-box, black, 15 , 0.0 , 2 , 0)");
-        vsFriendButton.setOnAction(event -> {
+        scnMainMenu.getStylesheets().add("Resources/Styles/MainMenuStyles.css");
 
+        vBoxMainMenu.getChildren().addAll(imgLogo, btnVsFriend, btnVsComputer, btnCredits, btnQuit);
 
+        vBoxMainMenu.setAlignment(Pos.CENTER);
+        vBoxMainMenu.setSpacing(20);
+
+        this.setButtonsOnAction();
+
+        return scnMainMenu;
+    }
+
+    public void setButtonsOnAction()
+    {
+        btnVsFriend.setOnAction(event -> {
             mainStage.setScene(enterNamesController.getEnterNamesView());
         });
-        vsComputerButton = new Button("vs Computer");
-        vsComputerButton.setStyle("-fx-background-color: lightyellow");
-        vsComputerButton.setMinSize(130, 40);
-        vsComputerButton.setFont(Font.font ("Serif", 20));
-        vsComputerButton.setStyle("-fx-effect: dropshadow(one-pass-box, black, 15, 0.0 , 2 , 0)");
-        creditsButton = new Button("Credits");
-        creditsButton.setStyle("-fx-background-color: lightyellow");
-        creditsButton.setMinSize(130, 40);
-        creditsButton.setFont(Font.font ("Serif", 20));
-        creditsButton.setStyle("-fx-effect: dropshadow(one-pass-box, black, 15 , 0.0 , 2 , 0)");
-        quitButton = new Button("Quit");
-        quitButton.setStyle("-fx-background-color: lightyellow");
-        quitButton.setMinSize(130, 40);
-        quitButton.setFont(Font.font ("Serif", 20));
-        quitButton.setStyle("-fx-effect: dropshadow(one-pass-box, black, 15 , 0.0 , 2 , 0)");
-        quitButton.setOnAction(event -> {
-            System.exit(1);
+
+        btnVsComputer.setOnAction(event -> {
+            //ToDo
         });
 
-        mainVBox = new VBox();
-        mainVBox.getChildren().addAll(logoImage, vsFriendButton, vsComputerButton, creditsButton, quitButton);
-        mainVBox.setStyle("-fx-background-color: lightblue");
+        btnCredits.setOnAction(event -> {
+            //ToDo
+        });
 
-
-
-
-        mainScene = new Scene(mainVBox, 200, 300);
-
-        mainVBox.setAlignment(Pos.CENTER);
-        mainVBox.setSpacing(20);
-
-        return mainScene;
+        btnQuit.setOnAction(event -> {
+            System.exit(1);
+        });
     }
 
     public void setSceneToMainStage()
@@ -97,9 +83,8 @@ public class StartMenu extends Application {
         mainStage.setScene(gameViewController.getGameViewStage());
     }
 
-    //setting Start Menu scene to stage
     public void setMainSceneToStage()
     {
-        mainStage.setScene(getMainScene());
+        mainStage.setScene(getScnMainMenu());
     }
 }
