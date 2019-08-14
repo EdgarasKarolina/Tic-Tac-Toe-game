@@ -2,7 +2,6 @@ package Controllers;
 
 import View.EnterNamesView;
 import javafx.scene.Scene;
-import javafx.stage.Stage;
 
 /**
  * Created by Edgaras on 18/07/2016.
@@ -16,13 +15,13 @@ public class EnterNamesController {
     public Scene getEnterNamesView()
     {
 
-        return enterNamesView.getEnterNamesScene();
+        return enterNamesView.getScnCredentials();
     }
 
     public String getNamePlayer1()
     {
         String name;
-        name = enterNamesView.getNamePlayer1();
+        name = enterNamesView.getPlayer1Name();
 
         return name;
     }
@@ -30,7 +29,7 @@ public class EnterNamesController {
     public String getNamePlayer2()
     {
         String name;
-        name = enterNamesView.getNamePlayer2();
+        name = enterNamesView.getPlayer2Name();
 
         return name;
     }
