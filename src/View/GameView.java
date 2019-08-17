@@ -14,32 +14,30 @@ import javafx.stage.Stage;
 import java.util.ArrayList;
 import java.util.Random;
 
-/**
- * Created by Edgaras on 15/07/2016.
- */
+
 public class GameView {
 
-   static Stage gameStage = new Stage(); //cia padaryt pakeitimai
+   static Stage gameStage = new Stage();
 
 
 
     static int numberOfClicksCounter;
     static int whoHasWonCounter = 0;
+
+
     static ArrayList<Button> xListOfButtons = new ArrayList<>();
     static ArrayList<Button> oListOfButtons = new ArrayList<>();
-    //if arraylist contains these buttons then you win
+    public static ArrayList<Button> allButtons = new ArrayList<>();
 
-    //   Button button;
-
-    Button button1;
-    Button button2;
-    Button button3;
-    Button button4;
-    Button button5;
-    Button button6;
-    Button button7;
-    Button button8;
-    Button button9;
+    public  Button btnSquare1;
+    public  Button btnSquare2;
+    public  Button btnSquare3;
+    public  Button btnSquare4;
+    public  Button btnSquare5;
+    public  Button btnSquare6;
+    public  Button btnSquare7;
+    public  Button btnSquare8;
+    public  Button btnSquare9;
 
     HBox firstLineHBox;
     HBox secondLineHBox;
@@ -53,70 +51,48 @@ public class GameView {
 
     PlayersDialogBoxView playersDialogBoxView;
 
-    Image xImage = new Image(getClass().getResourceAsStream("x.png"));
-    Image oImage = new Image(getClass().getResourceAsStream("o.png"));
-    Image xBlackImage = new Image(getClass().getResourceAsStream("x_black.png"));
-    Image oBlackImage = new Image(getClass().getResourceAsStream("o_black.png"));
+
+    Image imgWhiteX = new Image(getClass().getResourceAsStream("Xsign.png"));
+    Image imgWhite0 = new Image(getClass().getResourceAsStream("0sign.png"));
+    Image imgBlackX = new Image(getClass().getResourceAsStream("XsignBlack.png"));
+    Image imgBlack0 = new Image(getClass().getResourceAsStream("0signBlack.png"));
 
     public Scene getGameStage() {
+
+        btnSquare1 = new Button();
+        btnSquare2 = new Button();
+        btnSquare3 = new Button();
+        btnSquare4 = new Button();
+        btnSquare5 = new Button();
+        btnSquare6 = new Button();
+        btnSquare7 = new Button();
+        btnSquare8 = new Button();
+        btnSquare9 = new Button();
+
+        setAllSquaresToList();
+
+        allButtons.forEach(squareButton->squareButton.getStyleClass().add("square-button"));
+
         gameStageVBox = new VBox();
 
 
-        button1 = new Button();
-        button1.setStyle("-fx-font: 50 arial; -fx-base: #FFFFFF;");
-        button1.setMinSize(133, 133);
-        button1.setMaxSize(133, 133);
-        button2 = new Button();
-        button2.setStyle("-fx-font: 50 arial; -fx-base: #FFFFFF;");
-        button2.setMinSize(133, 133);
-        button2.setMaxSize(133, 133);
-        button3 = new Button();
-        button3.setStyle("-fx-font: 50 arial; -fx-base: #FFFFFF;");
-        button3.setMinSize(133, 133);
-        button3.setMaxSize(133, 133);
-        button4 = new Button();
-        button4.setStyle("-fx-font: 50 arial; -fx-base: #FFFFFF;");
-        button4.setMinSize(133, 133);
-        button4.setMaxSize(133, 133);
-        button5 = new Button();
-        button5.setStyle("-fx-font: 50 arial; -fx-base: #FFFFFF;");
-        button5.setMinSize(133, 133);
-        button5.setMaxSize(133, 133);
-        button6 = new Button();
-        button6.setStyle("-fx-font: 50 arial; -fx-base: #FFFFFF;");
-        button6.setMinSize(133, 133);
-        button6.setMaxSize(133, 133);
-        button7 = new Button();
-        button7.setStyle("-fx-font: 50 arial; -fx-base: #FFFFFF;");
-        button7.setMinSize(133, 133);
-        button7.setMaxSize(133, 133);
-        button8 = new Button();
-        button8.setStyle("-fx-font: 50 arial; -fx-base: #FFFFFF;");
-        button8.setMinSize(133, 133);
-        button8.setMaxSize(133, 133);
-        button9 = new Button();
-        button9.setStyle("-fx-font: 50 arial; -fx-base: #FFFFFF;");
-        button9.setMinSize(133, 133);
-        button9.setMaxSize(133, 133);
-
-
-        button1.setOnAction(event -> buttonsAction(button1));
-        button2.setOnAction(event -> buttonsAction(button2));
-        button3.setOnAction(event -> buttonsAction(button3));
-        button4.setOnAction(event -> buttonsAction(button4));
-        button5.setOnAction(event -> buttonsAction(button5));
-        button6.setOnAction(event -> buttonsAction(button6));
-        button7.setOnAction(event -> buttonsAction(button7));
-        button8.setOnAction(event -> buttonsAction(button8));
-        button9.setOnAction(event -> buttonsAction(button9));
+        btnSquare1.setOnAction(event -> buttonsAction(btnSquare1));
+        btnSquare2.setOnAction(event -> buttonsAction(btnSquare2));
+        btnSquare3.setOnAction(event -> buttonsAction(btnSquare3));
+        btnSquare4.setOnAction(event -> buttonsAction(btnSquare4));
+        btnSquare5.setOnAction(event -> buttonsAction(btnSquare5));
+        btnSquare6.setOnAction(event -> buttonsAction(btnSquare6));
+        btnSquare7.setOnAction(event -> buttonsAction(btnSquare7));
+        btnSquare8.setOnAction(event -> buttonsAction(btnSquare8));
+        btnSquare9.setOnAction(event -> buttonsAction(btnSquare9));
 
 
         firstLineHBox = new HBox();
-        firstLineHBox.getChildren().addAll(button1, button2, button3);
+        firstLineHBox.getChildren().addAll(btnSquare1, btnSquare2, btnSquare3);
         secondLineHBox = new HBox();
-        secondLineHBox.getChildren().addAll(button4, button5, button6);
+        secondLineHBox.getChildren().addAll(btnSquare4, btnSquare5, btnSquare6);
         thirdLineHBox = new HBox();
-        thirdLineHBox.getChildren().addAll(button7, button8, button9);
+        thirdLineHBox.getChildren().addAll(btnSquare7, btnSquare8, btnSquare9);
         gameStageVBox.getChildren().addAll(firstLineHBox, secondLineHBox, thirdLineHBox);
 
 
@@ -126,86 +102,88 @@ public class GameView {
         borderPane.setRight(playersDialogBoxView.getPlayersDialogBoxVBox());
 
         gameStageScene = new Scene(borderPane, 580, 420);
+        
+        gameStageScene.getStylesheets().add("Resources/Styles/GameplayStyles.css");
 
 
         return gameStageScene;
 
     }
-    //when button is clicked method inserts picture, disables button and adds it to ArrayList
+    //when button is clicked method inserts picture, disables button and adds it tosetXonButton ArrayList
     public void setXonButton(Button button) {
-        button.setGraphic(new ImageView(xImage));
+        button.setGraphic(new ImageView(imgWhiteX));
         button.setDisable(true);
         xListOfButtons.add(button);
     }
 //when button is clicked method inserts picture, disables button and adds it to ArrayList
     public void setOonButton(Button button) {
-        button.setGraphic(new ImageView(oImage));
+        button.setGraphic(new ImageView(imgWhite0));
         button.setDisable(true);
         oListOfButtons.add(button);
     }
 
     public void ifXHasWon() {
         if (isItDraw1CheckX() == true) {
-            button1.setGraphic(new ImageView(xBlackImage));
-            button2.setGraphic(new ImageView(xBlackImage));
-            button3.setGraphic(new ImageView(xBlackImage));
+            btnSquare1.setGraphic(new ImageView(imgBlackX));
+            btnSquare2.setGraphic(new ImageView(imgBlackX));
+            btnSquare3.setGraphic(new ImageView(imgBlackX));
             disableAllButtons();
             whoHasWonCounter = 1;
 
 
         } else if (isItDraw2CheckX() == true) {
-            button4.setGraphic(new ImageView(xBlackImage));
-            button5.setGraphic(new ImageView(xBlackImage));
-            button6.setGraphic(new ImageView(xBlackImage));
+            btnSquare4.setGraphic(new ImageView(imgBlackX));
+            btnSquare5.setGraphic(new ImageView(imgBlackX));
+            btnSquare6.setGraphic(new ImageView(imgBlackX));
             disableAllButtons();
             whoHasWonCounter = 1;
 
 
         } else if (isItDraw3CheckX() == true) {
-            button7.setGraphic(new ImageView(xBlackImage));
-            button8.setGraphic(new ImageView(xBlackImage));
-            button9.setGraphic(new ImageView(xBlackImage));
+            btnSquare7.setGraphic(new ImageView(imgBlackX));
+            btnSquare8.setGraphic(new ImageView(imgBlackX));
+            btnSquare9.setGraphic(new ImageView(imgBlackX));
             disableAllButtons();
             whoHasWonCounter = 1;
 
 
         } else if (isItDraw4CheckX() == true) {
-            button1.setGraphic(new ImageView(xBlackImage));
-            button4.setGraphic(new ImageView(xBlackImage));
-            button7.setGraphic(new ImageView(xBlackImage));
+            btnSquare1.setGraphic(new ImageView(imgBlackX));
+            btnSquare4.setGraphic(new ImageView(imgBlackX));
+            btnSquare7.setGraphic(new ImageView(imgBlackX));
             disableAllButtons();
             whoHasWonCounter = 1;
 
 
         } else if (isItDraw5CheckX() == true) {
-            button2.setGraphic(new ImageView(xBlackImage));
-            button5.setGraphic(new ImageView(xBlackImage));
-            button8.setGraphic(new ImageView(xBlackImage));
+            btnSquare2.setGraphic(new ImageView(imgBlackX));
+            btnSquare5.setGraphic(new ImageView(imgBlackX));
+            btnSquare8.setGraphic(new ImageView(imgBlackX));
             disableAllButtons();
             whoHasWonCounter = 1;
 
 
         } else if (isItDraw6CheckX() == true) {
-            button3.setGraphic(new ImageView(xBlackImage));
-            button6.setGraphic(new ImageView(xBlackImage));
-            button9.setGraphic(new ImageView(xBlackImage));
+            btnSquare3.setGraphic(new ImageView(imgBlackX));
+            btnSquare6.setGraphic(new ImageView(imgBlackX));
+            btnSquare9.setGraphic(new ImageView(imgBlackX));
             disableAllButtons();
             whoHasWonCounter = 1;
 
 
         } else if (isItDraw7CheckX() == true) {
-            button3.setGraphic(new ImageView(xBlackImage));
-            button5.setGraphic(new ImageView(xBlackImage));
-            button7.setGraphic(new ImageView(xBlackImage));
+            btnSquare3.setGraphic(new ImageView(imgBlackX));
+            btnSquare5.setGraphic(new ImageView(imgBlackX));
+            btnSquare7.setGraphic(new ImageView(imgBlackX));
             disableAllButtons();
             whoHasWonCounter = 1;
 
 
         }
         else if (isItDraw8CheckX() == true) {
-            button1.setGraphic(new ImageView(xBlackImage));
-            button5.setGraphic(new ImageView(xBlackImage));
-            button9.setGraphic(new ImageView(xBlackImage));
+            btnSquare1.setGraphic(new ImageView(imgBlackX));
+            btnSquare5.setGraphic(new ImageView(imgBlackX));
+            btnSquare9.setGraphic(new ImageView(imgBlackX));
             disableAllButtons();
             whoHasWonCounter = 1;
         }
@@ -217,65 +195,65 @@ public class GameView {
 
             if (isItDraw1CheckO() == true)
             {
-                button1.setGraphic(new ImageView(oBlackImage));
-                button2.setGraphic(new ImageView(oBlackImage));
-                button3.setGraphic(new ImageView(oBlackImage));
+                btnSquare1.setGraphic(new ImageView(imgBlack0));
+                btnSquare2.setGraphic(new ImageView(imgBlack0));
+                btnSquare3.setGraphic(new ImageView(imgBlack0));
                 disableAllButtons();
                 whoHasWonCounter = 2;
         }
             else if (isItDraw2CheckO() == true) {
-                button4.setGraphic(new ImageView(oBlackImage));
-                button5.setGraphic(new ImageView(oBlackImage));
-                button6.setGraphic(new ImageView(oBlackImage));
+                btnSquare4.setGraphic(new ImageView(imgBlack0));
+                btnSquare5.setGraphic(new ImageView(imgBlack0));
+                btnSquare6.setGraphic(new ImageView(imgBlack0));
                 disableAllButtons();
                 whoHasWonCounter = 2;
 
 
         } else if (isItDraw3CheckO() == true) {
-                button7.setGraphic(new ImageView(oBlackImage));
-                button8.setGraphic(new ImageView(oBlackImage));
-                button9.setGraphic(new ImageView(oBlackImage));
+                btnSquare7.setGraphic(new ImageView(imgBlack0));
+                btnSquare8.setGraphic(new ImageView(imgBlack0));
+                btnSquare9.setGraphic(new ImageView(imgBlack0));
                 disableAllButtons();
                 whoHasWonCounter = 2;
 
 
         } else if (isItDraw4CheckO() == true) {
-                button1.setGraphic(new ImageView(oBlackImage));
-                button4.setGraphic(new ImageView(oBlackImage));
-                button7.setGraphic(new ImageView(oBlackImage));
+                btnSquare1.setGraphic(new ImageView(imgBlack0));
+                btnSquare4.setGraphic(new ImageView(imgBlack0));
+                btnSquare7.setGraphic(new ImageView(imgBlack0));
                 disableAllButtons();
                 whoHasWonCounter = 2;
 
 
         } else if (isItDraw5CheckO() == true) {
-                button2.setGraphic(new ImageView(oBlackImage));
-                button5.setGraphic(new ImageView(oBlackImage));
-                button8.setGraphic(new ImageView(oBlackImage));
+                btnSquare2.setGraphic(new ImageView(imgBlack0));
+                btnSquare5.setGraphic(new ImageView(imgBlack0));
+                btnSquare8.setGraphic(new ImageView(imgBlack0));
                 disableAllButtons();
                 whoHasWonCounter = 2;
 
 
         } else if (isItDraw6CheckO() == true) {
-                button3.setGraphic(new ImageView(oBlackImage));
-                button6.setGraphic(new ImageView(oBlackImage));
-                button9.setGraphic(new ImageView(oBlackImage));
+                btnSquare3.setGraphic(new ImageView(imgBlack0));
+                btnSquare6.setGraphic(new ImageView(imgBlack0));
+                btnSquare9.setGraphic(new ImageView(imgBlack0));
                 disableAllButtons();
                 whoHasWonCounter = 2;
 
 
         } else if (isItDraw7CheckO() == true) {
-                button3.setGraphic(new ImageView(oBlackImage));
-                button5.setGraphic(new ImageView(oBlackImage));
-                button7.setGraphic(new ImageView(oBlackImage));
+                btnSquare3.setGraphic(new ImageView(imgBlack0));
+                btnSquare5.setGraphic(new ImageView(imgBlack0));
+                btnSquare7.setGraphic(new ImageView(imgBlack0));
                 disableAllButtons();
                 whoHasWonCounter = 2;
 
 
         }
         else if (isItDraw8CheckO() == true) {
-                button1.setGraphic(new ImageView(oBlackImage));
-                button5.setGraphic(new ImageView(oBlackImage));
-                button9.setGraphic(new ImageView(oBlackImage));
+                btnSquare1.setGraphic(new ImageView(imgBlack0));
+                btnSquare5.setGraphic(new ImageView(imgBlack0));
+                btnSquare9.setGraphic(new ImageView(imgBlack0));
                 disableAllButtons();
                 whoHasWonCounter = 2;
         }
@@ -307,15 +285,15 @@ public class GameView {
     //after player won all buttons are disabled
     public void disableAllButtons()
     {
-        button1.setDisable(true);
-        button2.setDisable(true);
-        button3.setDisable(true);
-        button4.setDisable(true);
-        button5.setDisable(true);
-        button6.setDisable(true);
-        button7.setDisable(true);
-        button8.setDisable(true);
-        button9.setDisable(true);
+        btnSquare1.setDisable(true);
+        btnSquare2.setDisable(true);
+        btnSquare3.setDisable(true);
+        btnSquare4.setDisable(true);
+        btnSquare5.setDisable(true);
+        btnSquare6.setDisable(true);
+        btnSquare7.setDisable(true);
+        btnSquare8.setDisable(true);
+        btnSquare9.setDisable(true);
     }
 
 
@@ -372,7 +350,7 @@ public class GameView {
 
     public boolean isItDraw1CheckO()
     {
-      if  (oListOfButtons.contains(button1) & (oListOfButtons.contains(button2) & (oListOfButtons.contains(button3))))
+      if  (oListOfButtons.contains(btnSquare1) & (oListOfButtons.contains(btnSquare2) & (oListOfButtons.contains(btnSquare3))))
       {
           return true;
       }
@@ -384,7 +362,7 @@ public class GameView {
 
     public boolean isItDraw2CheckO()
     {
-        if  (oListOfButtons.contains(button4) & (oListOfButtons.contains(button5) & (oListOfButtons.contains(button6))))
+        if  (oListOfButtons.contains(btnSquare4) & (oListOfButtons.contains(btnSquare5) & (oListOfButtons.contains(btnSquare6))))
         {
             return true;
         }
@@ -396,7 +374,7 @@ public class GameView {
 
     public boolean isItDraw3CheckO()
     {
-        if  (oListOfButtons.contains(button7) & (oListOfButtons.contains(button8) & (oListOfButtons.contains(button9))))
+        if  (oListOfButtons.contains(btnSquare7) & (oListOfButtons.contains(btnSquare8) & (oListOfButtons.contains(btnSquare9))))
         {
             return true;
         }
@@ -408,7 +386,7 @@ public class GameView {
 
     public boolean isItDraw4CheckO()
     {
-        if  (oListOfButtons.contains(button1) & (oListOfButtons.contains(button4) & (oListOfButtons.contains(button7))))
+        if  (oListOfButtons.contains(btnSquare1) & (oListOfButtons.contains(btnSquare4) & (oListOfButtons.contains(btnSquare7))))
         {
             return true;
         }
@@ -419,7 +397,7 @@ public class GameView {
     }
     public boolean isItDraw5CheckO()
     {
-        if  (oListOfButtons.contains(button2) & (oListOfButtons.contains(button5) & (oListOfButtons.contains(button8))))
+        if  (oListOfButtons.contains(btnSquare2) & (oListOfButtons.contains(btnSquare5) & (oListOfButtons.contains(btnSquare8))))
         {
             return true;
         }
@@ -431,7 +409,7 @@ public class GameView {
 
     public boolean isItDraw6CheckO()
     {
-        if  (oListOfButtons.contains(button3) & (oListOfButtons.contains(button6) & (oListOfButtons.contains(button9))))
+        if  (oListOfButtons.contains(btnSquare3) & (oListOfButtons.contains(btnSquare6) & (oListOfButtons.contains(btnSquare9))))
         {
             return true;
         }
@@ -443,7 +421,7 @@ public class GameView {
 
     public boolean isItDraw7CheckO()
     {
-        if  (oListOfButtons.contains(button3) & (oListOfButtons.contains(button5) & (oListOfButtons.contains(button7))))
+        if  (oListOfButtons.contains(btnSquare3) & (oListOfButtons.contains(btnSquare5) & (oListOfButtons.contains(btnSquare7))))
         {
             return true;
         }
@@ -455,7 +433,7 @@ public class GameView {
 
     public boolean isItDraw8CheckO()
     {
-        if  (oListOfButtons.contains(button1) & (oListOfButtons.contains(button5) & (oListOfButtons.contains(button9))))
+        if  (oListOfButtons.contains(btnSquare1) & (oListOfButtons.contains(btnSquare5) & (oListOfButtons.contains(btnSquare9))))
         {
             return true;
         }
@@ -467,7 +445,7 @@ public class GameView {
 
     public boolean isItDraw1CheckX()
     {
-        if  (xListOfButtons.contains(button1) & (xListOfButtons.contains(button2) & (xListOfButtons.contains(button3))))
+        if  (xListOfButtons.contains(btnSquare1) & (xListOfButtons.contains(btnSquare2) & (xListOfButtons.contains(btnSquare3))))
         {
             return true;
         }
@@ -479,7 +457,7 @@ public class GameView {
 
     public boolean isItDraw2CheckX()
     {
-        if  (xListOfButtons.contains(button4) & (xListOfButtons.contains(button5) & (xListOfButtons.contains(button6))))
+        if  (xListOfButtons.contains(btnSquare4) & (xListOfButtons.contains(btnSquare5) & (xListOfButtons.contains(btnSquare6))))
         {
             return true;
         }
@@ -491,7 +469,7 @@ public class GameView {
 
     public boolean isItDraw3CheckX()
     {
-        if  (xListOfButtons.contains(button7) & (xListOfButtons.contains(button8) & (xListOfButtons.contains(button9))))
+        if  (xListOfButtons.contains(btnSquare7) & (xListOfButtons.contains(btnSquare8) & (xListOfButtons.contains(btnSquare9))))
         {
             return true;
         }
@@ -503,7 +481,7 @@ public class GameView {
 
     public boolean isItDraw4CheckX()
     {
-        if  (xListOfButtons.contains(button1) & (xListOfButtons.contains(button4) & (xListOfButtons.contains(button7))))
+        if  (xListOfButtons.contains(btnSquare1) & (xListOfButtons.contains(btnSquare4) & (xListOfButtons.contains(btnSquare7))))
         {
             return true;
         }
@@ -515,7 +493,7 @@ public class GameView {
     }
     public boolean isItDraw5CheckX()
     {
-        if  (xListOfButtons.contains(button2) & (xListOfButtons.contains(button5) & (xListOfButtons.contains(button8))))
+        if  (xListOfButtons.contains(btnSquare2) & (xListOfButtons.contains(btnSquare5) & (xListOfButtons.contains(btnSquare8))))
         {
             return true;
         }
@@ -527,7 +505,7 @@ public class GameView {
 
     public boolean isItDraw6CheckX()
     {
-        if  (xListOfButtons.contains(button3) & (xListOfButtons.contains(button6) & (xListOfButtons.contains(button9))))
+        if  (xListOfButtons.contains(btnSquare3) & (xListOfButtons.contains(btnSquare6) & (xListOfButtons.contains(btnSquare9))))
         {
             return true;
         }
@@ -539,7 +517,7 @@ public class GameView {
 
     public boolean isItDraw7CheckX()
     {
-        if  (xListOfButtons.contains(button3) & (xListOfButtons.contains(button5) & (xListOfButtons.contains(button7))))
+        if  (xListOfButtons.contains(btnSquare3) & (xListOfButtons.contains(btnSquare5) & (xListOfButtons.contains(btnSquare7))))
         {
             return true;
         }
@@ -551,7 +529,7 @@ public class GameView {
 
     public boolean isItDraw8CheckX()
     {
-        if  (xListOfButtons.contains(button1) & (xListOfButtons.contains(button5) & (xListOfButtons.contains(button9))))
+        if  (xListOfButtons.contains(btnSquare1) & (xListOfButtons.contains(btnSquare5) & (xListOfButtons.contains(btnSquare9))))
         {
             return true;
         }
@@ -559,6 +537,19 @@ public class GameView {
         else {
             return false;
         }
+    }
+
+    public void setAllSquaresToList()
+    {
+        allButtons.add(btnSquare1);
+        allButtons.add(btnSquare2);
+        allButtons.add(btnSquare3);
+        allButtons.add(btnSquare4);
+        allButtons.add(btnSquare5);
+        allButtons.add(btnSquare6);
+        allButtons.add(btnSquare7);
+        allButtons.add(btnSquare8);
+        allButtons.add(btnSquare9);
     }
 
 }
