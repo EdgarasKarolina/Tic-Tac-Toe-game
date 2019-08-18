@@ -17,47 +17,39 @@ import java.util.Random;
 
 public class GameView {
 
-   static Stage gameStage = new Stage();
+    BorderPane borderPane;
+    Scene scnGameplay;
 
+    VBox vBoxGameplay;
+    HBox hBoxFirstLine;
+    HBox hBoxSecondLine;
+    HBox hBoxThirdLine;
 
+    public Button btnSquare1;
+    public Button btnSquare2;
+    public Button btnSquare3;
+    public Button btnSquare4;
+    public Button btnSquare5;
+    public Button btnSquare6;
+    public Button btnSquare7;
+    public Button btnSquare8;
+    public Button btnSquare9;
+
+    public static ArrayList<Button> xListOfButtons = new ArrayList<>();
+    public static ArrayList<Button> oListOfButtons = new ArrayList<>();
+    public static ArrayList<Button> allButtons = new ArrayList<>();
+
+    Image imgWhiteX = new Image(getClass().getResourceAsStream("/Resources/Images/Xsign.png"));
+    Image imgWhite0 = new Image(getClass().getResourceAsStream("/Resources/Images/0sign.png"));
+    Image imgBlackX = new Image(getClass().getResourceAsStream("/Resources/Images/XsignBlack.png"));
+    Image imgBlack0 = new Image(getClass().getResourceAsStream("/Resources/Images/0signBlack.png"));
 
     static int numberOfClicksCounter;
     static int whoHasWonCounter = 0;
 
-
-    static ArrayList<Button> xListOfButtons = new ArrayList<>();
-    static ArrayList<Button> oListOfButtons = new ArrayList<>();
-    public static ArrayList<Button> allButtons = new ArrayList<>();
-
-    public  Button btnSquare1;
-    public  Button btnSquare2;
-    public  Button btnSquare3;
-    public  Button btnSquare4;
-    public  Button btnSquare5;
-    public  Button btnSquare6;
-    public  Button btnSquare7;
-    public  Button btnSquare8;
-    public  Button btnSquare9;
-
-    HBox firstLineHBox;
-    HBox secondLineHBox;
-    HBox thirdLineHBox;
-
-    VBox gameStageVBox;
-
-    Scene gameStageScene;
-
-    BorderPane borderPane;
-
     PlayersDialogBoxView playersDialogBoxView;
 
-
-    Image imgWhiteX = new Image(getClass().getResourceAsStream("Xsign.png"));
-    Image imgWhite0 = new Image(getClass().getResourceAsStream("0sign.png"));
-    Image imgBlackX = new Image(getClass().getResourceAsStream("XsignBlack.png"));
-    Image imgBlack0 = new Image(getClass().getResourceAsStream("0signBlack.png"));
-
-    public Scene getGameStage() {
+    public Scene getGameplay() {
 
         btnSquare1 = new Button();
         btnSquare2 = new Button();
@@ -69,60 +61,50 @@ public class GameView {
         btnSquare8 = new Button();
         btnSquare9 = new Button();
 
-        setAllSquaresToList();
-
+        setAllButtonsToList();
         allButtons.forEach(squareButton->squareButton.getStyleClass().add("square-button"));
 
-        gameStageVBox = new VBox();
+        vBoxGameplay = new VBox();
 
-
-        btnSquare1.setOnAction(event -> buttonsAction(btnSquare1));
-        btnSquare2.setOnAction(event -> buttonsAction(btnSquare2));
-        btnSquare3.setOnAction(event -> buttonsAction(btnSquare3));
-        btnSquare4.setOnAction(event -> buttonsAction(btnSquare4));
-        btnSquare5.setOnAction(event -> buttonsAction(btnSquare5));
-        btnSquare6.setOnAction(event -> buttonsAction(btnSquare6));
-        btnSquare7.setOnAction(event -> buttonsAction(btnSquare7));
-        btnSquare8.setOnAction(event -> buttonsAction(btnSquare8));
-        btnSquare9.setOnAction(event -> buttonsAction(btnSquare9));
-
-
-        firstLineHBox = new HBox();
-        firstLineHBox.getChildren().addAll(btnSquare1, btnSquare2, btnSquare3);
-        secondLineHBox = new HBox();
-        secondLineHBox.getChildren().addAll(btnSquare4, btnSquare5, btnSquare6);
-        thirdLineHBox = new HBox();
-        thirdLineHBox.getChildren().addAll(btnSquare7, btnSquare8, btnSquare9);
-        gameStageVBox.getChildren().addAll(firstLineHBox, secondLineHBox, thirdLineHBox);
-
+        hBoxFirstLine = new HBox();
+        hBoxFirstLine.getChildren().addAll(btnSquare1, btnSquare2, btnSquare3);
+        hBoxSecondLine = new HBox();
+        hBoxSecondLine.getChildren().addAll(btnSquare4, btnSquare5, btnSquare6);
+        hBoxThirdLine = new HBox();
+        hBoxThirdLine.getChildren().addAll(btnSquare7, btnSquare8, btnSquare9);
+        vBoxGameplay.getChildren().addAll(hBoxFirstLine, hBoxSecondLine, hBoxThirdLine);
 
         borderPane = new BorderPane();
+
         PlayersDialogBoxView playersDialogBoxView = new PlayersDialogBoxView();
-        borderPane.setLeft(gameStageVBox);
-        borderPane.setRight(playersDialogBoxView.getPlayersDialogBoxVBox());
+        borderPane.setLeft(vBoxGameplay);
+        borderPane.setRight(playersDialogBoxView.getPanel());
 
-        gameStageScene = new Scene(borderPane, 580, 420);
-        
-        gameStageScene.getStylesheets().add("Resources/Styles/GameplayStyles.css");
+        scnGameplay = new Scene(borderPane, 580, 420);
+        scnGameplay.getStylesheets().add("Resources/Styles/GameplayStyles.css");
 
+        this.setAllSquareButtonsOnAction();
 
-        return gameStageScene;
-
+        return scnGameplay;
     }
-    //when button is clicked method inserts picture, disables button and adds it tosetXonButton ArrayList
-    public void setXonButton(Button button) {
+
+    //when button is clicked method inserts picture, disables button and adds it to setXonButton ArrayList
+    public void setXonButton(Button button)
+    {
         button.setGraphic(new ImageView(imgWhiteX));
         button.setDisable(true);
         xListOfButtons.add(button);
     }
 //when button is clicked method inserts picture, disables button and adds it to ArrayList
-    public void setOonButton(Button button) {
+    public void setOonButton(Button button)
+    {
         button.setGraphic(new ImageView(imgWhite0));
         button.setDisable(true);
         oListOfButtons.add(button);
     }
 
-    public void ifXHasWon() {
+    public void ifXHasWon()
+    {
         if (isItDraw1CheckX() == true) {
             btnSquare1.setGraphic(new ImageView(imgBlackX));
             btnSquare2.setGraphic(new ImageView(imgBlackX));
@@ -191,8 +173,8 @@ public class GameView {
 
     }
 
-    public void ifOHasWon() {
-
+    public void ifOHasWon()
+    {
             if (isItDraw1CheckO() == true)
             {
                 btnSquare1.setGraphic(new ImageView(imgBlack0));
@@ -262,40 +244,37 @@ public class GameView {
 
     }
 
-    public void buttonsAction(Button button) {
+    public void buttonsAction(Button button)
+    {
         numberOfClicksCounter++;
-        if (numberOfClicksCounter % 2 == 0) {
-
+        if (numberOfClicksCounter % 2 == 0)
+        {
             setXonButton(button);
             ifXHasWon();
             playersDialogBoxView = new PlayersDialogBoxView();
             playersDialogBoxView.setWhoseTurnToPlayLabel();
-
-
-        } else {
-
+        }
+        else
+        {
             setOonButton(button);
             ifOHasWon();
             playersDialogBoxView = new PlayersDialogBoxView();
             playersDialogBoxView.setWhoseTurnToPlayLabel();
-
         }
     }
 
-    //after player won all buttons are disabled
-    public void disableAllButtons()
+    public void setAllSquareButtonsOnAction()
     {
-        btnSquare1.setDisable(true);
-        btnSquare2.setDisable(true);
-        btnSquare3.setDisable(true);
-        btnSquare4.setDisable(true);
-        btnSquare5.setDisable(true);
-        btnSquare6.setDisable(true);
-        btnSquare7.setDisable(true);
-        btnSquare8.setDisable(true);
-        btnSquare9.setDisable(true);
+        btnSquare1.setOnAction(event -> buttonsAction(btnSquare1));
+        btnSquare2.setOnAction(event -> buttonsAction(btnSquare2));
+        btnSquare3.setOnAction(event -> buttonsAction(btnSquare3));
+        btnSquare4.setOnAction(event -> buttonsAction(btnSquare4));
+        btnSquare5.setOnAction(event -> buttonsAction(btnSquare5));
+        btnSquare6.setOnAction(event -> buttonsAction(btnSquare6));
+        btnSquare7.setOnAction(event -> buttonsAction(btnSquare7));
+        btnSquare8.setOnAction(event -> buttonsAction(btnSquare8));
+        btnSquare9.setOnAction(event -> buttonsAction(btnSquare9));
     }
-
 
 
     //set numberOfCLicksCounter to 1 or 2
@@ -338,11 +317,6 @@ public class GameView {
     {
         xListOfButtons.clear();
         oListOfButtons.clear();
-    }
-
-    public void closeGameView()
-    {
-        gameStage.close();
     }
 
    //this is used to check if arraylists does not contain buttons and that the size of both of them combined is 9
@@ -539,7 +513,7 @@ public class GameView {
         }
     }
 
-    public void setAllSquaresToList()
+    public void setAllButtonsToList()
     {
         allButtons.add(btnSquare1);
         allButtons.add(btnSquare2);
@@ -552,4 +526,9 @@ public class GameView {
         allButtons.add(btnSquare9);
     }
 
+    public void disableAllButtons()
+    {
+        for(Button button : allButtons)
+            button.setDisable(true);
+    }
 }

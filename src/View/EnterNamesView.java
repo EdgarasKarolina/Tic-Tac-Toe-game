@@ -1,21 +1,21 @@
 package View;
 
-import Controllers.GameViewController;
-import Controllers.GameplayController;
-import Controllers.MainMenuController;
-import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
-import javafx.scene.text.Font;
 
-/**
- * Created by Edgaras on 18/07/2016.
- */
+
 public class EnterNamesView {
+
+    Scene scnCredentials;
+
+    VBox vBox;
+    HBox hBox;
+    HBox hBox2;
+    HBox hBox3;
 
     Label lblInsertNames = new Label("Insert players names");
     Label lblPlayer1Name = new Label("Player 1 name");
@@ -29,25 +29,18 @@ public class EnterNamesView {
 
     String msgWarning = "Insert Name";
 
-    Scene scnCredentials;
-
-    VBox vBox = new VBox();
-    HBox hBox = new HBox();
-    HBox hBox2 = new HBox();
-    HBox hBox3 = new HBox();
-
-
-
-
-
-    GameViewController gameViewController = new GameViewController();
     GameView gameView = new GameView();
     PlayersDialogBoxView playersDialogBoxView;
-     static StartMenu startMenu = new StartMenu();
+    static StartMenu startMenu = new StartMenu();
 
 
     public Scene getScnCredentials()
     {
+        vBox = new VBox();
+        hBox = new HBox();
+        hBox2 = new HBox();
+        hBox3 = new HBox();
+
         scnCredentials = new Scene(vBox, 280, 200);
         scnCredentials.getStylesheets().add("Resources/Styles/CredentialsStyles.css");
 
@@ -58,7 +51,6 @@ public class EnterNamesView {
         txtPlayer1Name.getStyleClass().add("name-text-field");
         txtPlayer2Name.getStyleClass().add("name-text-field");
 
-
         btnContinue.getStyleClass().add("credentials-button");
         btnBack.getStyleClass().add("credentials-button");
 
@@ -68,12 +60,12 @@ public class EnterNamesView {
         hBox2.getChildren().addAll(lblPlayer2Name, txtPlayer2Name);
         hBox3.getChildren().addAll( btnBack, btnContinue);
 
-        vBox.getChildren().addAll(lblInsertNames, hBox,hBox2, hBox3);
+        vBox.getChildren().addAll(lblInsertNames, hBox, hBox2, hBox3);
 
         this.setButtonsOnAction();
 
         return scnCredentials;
-        }
+    }
 
     public void setButtonsOnAction()
     {
@@ -81,14 +73,14 @@ public class EnterNamesView {
 
             if (txtPlayer1Name.getText().trim().equals("") || txtPlayer2Name.getText().trim().equals(""))
             {
-                txtPlayer1Name.setPromptText("Insert name");
-                txtPlayer2Name.setPromptText("Insert name");
+                txtPlayer1Name.setPromptText(msgWarning);
+                txtPlayer2Name.setPromptText(msgWarning);
             }
             else if (txtPlayer1Name.getText().trim().equals(""))
-                txtPlayer1Name.setPromptText("Insert name");
+                txtPlayer1Name.setPromptText(msgWarning);
 
             else if (txtPlayer2Name.getText().trim().equals(""))
-                txtPlayer2Name.setPromptText("Insert name");
+                txtPlayer2Name.setPromptText(msgWarning);
 
             else
                 startMenu.setSceneToMainStage();

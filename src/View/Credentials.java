@@ -2,14 +2,12 @@ package View;
 
 import Controllers.GameplayController;
 import Controllers.MainMenuController;
-import Controllers.PanelController;
 import Model.TTTButton;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
-import javafx.stage.Stage;
 
 public class Credentials {
 

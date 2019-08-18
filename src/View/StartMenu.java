@@ -19,9 +19,7 @@ public class StartMenu extends Application {
     Button btnCredits = new Button("Credits");
     Button btnQuit = new Button("Quit");
 
-    VBox vBoxMainMenu = new VBox();
-
-    ImageView imgLogo = new ImageView();
+    VBox vBoxMainMenu;
 
     static Stage mainStage;
     Scene scnMainMenu;
@@ -39,6 +37,8 @@ public class StartMenu extends Application {
 
     public Scene getScnMainMenu()
     {
+        vBoxMainMenu = new VBox();
+
         scnMainMenu = new Scene(vBoxMainMenu, 200, 300);
 
         btnVsFriend.getStyleClass().add("main-menu-button");
@@ -48,9 +48,7 @@ public class StartMenu extends Application {
         vBoxMainMenu.getStyleClass().add("main-menu-vbox");
 
         scnMainMenu.getStylesheets().add("Resources/Styles/MainMenuStyles.css");
-
-        vBoxMainMenu.getChildren().addAll(imgLogo, btnVsFriend, btnVsComputer, btnCredits, btnQuit);
-
+        vBoxMainMenu.getChildren().addAll(btnVsFriend, btnVsComputer, btnCredits, btnQuit);
         vBoxMainMenu.setAlignment(Pos.CENTER);
         vBoxMainMenu.setSpacing(20);
 

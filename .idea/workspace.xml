@@ -3,7 +3,32 @@
   <component name="ChangeListManager">
     <list default="true" id="11129068-b89c-497e-8a7e-db81bab70c53" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Tic-Tac-Toe game/View/Credentials.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tic-Tac-Toe game/View/Credentials.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Tic-Tac-Toe game/View/EnterNamesView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tic-Tac-Toe game/View/EnterNamesView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Tic-Tac-Toe game/View/GameView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tic-Tac-Toe game/View/GameView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Tic-Tac-Toe game/View/PlayersDialogBoxView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tic-Tac-Toe game/View/PlayersDialogBoxView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Tic-Tac-Toe game/View/StartMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tic-Tac-Toe game/View/StartMenu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Tic-Tac-Toe game/View/Xsign.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Tic-Tac-Toe game/View/o.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Tic-Tac-Toe game/View/o_black.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Tic-Tac-Toe game/View/small.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Tic-Tac-Toe game/View/x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Tic-Tac-Toe game/View/x_black.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controllers/GameViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/GameViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/0sign.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/Images/0sign.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/0signBlack.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/Images/0signBlack.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/Credentials.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/Credentials.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/EnterNamesView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/EnterNamesView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/View/GameView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/GameView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/PlayersDialogBoxView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/PlayersDialogBoxView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/StartMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/StartMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/Xsign.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/Images/Xsign.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/XsignBlack.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/Images/XsignBlack.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/o.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/o_black.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/small.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/x_black.png" beforeDir="false" />
     </list>
     <ignored path="Tic-Tac-Toe game.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -23,39 +48,41 @@
     <favorites_list name="Tic-Tac-Toe game" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="GameView.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/View/GameView.java">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="Credentials.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/View/Credentials.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="104" column="8" selection-start-line="104" selection-start-column="8" selection-end-line="104" selection-end-column="8" />
+            <state relative-caret-position="-867">
+              <caret line="16" column="27" lean-forward="true" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
+              <folding>
+                <element signature="e#3221#3222#0" expanded="true" />
+                <element signature="e#3269#3270#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PlayersDialogBoxView.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/View/PlayersDialogBoxView.java">
+      <file leaf-file-name="EnterNamesView.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/View/EnterNamesView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-68">
-              <caret line="69" column="41" selection-start-line="69" selection-start-column="22" selection-end-line="69" selection-end-column="41" />
+            <state relative-caret-position="1067">
+              <caret line="84" column="16" lean-forward="true" selection-start-line="84" selection-start-column="16" selection-end-line="84" selection-end-column="16" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Gameplay.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/View/Gameplay.java">
+      <file leaf-file-name="CredentialsController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Controllers/CredentialsController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="60" column="88" lean-forward="true" selection-start-line="60" selection-start-column="88" selection-end-line="60" selection-end-column="88" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StartMenu.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/View/StartMenu.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="355">
-              <caret line="49" column="8" selection-start-line="49" selection-start-column="8" selection-end-line="49" selection-end-column="80" />
+            <state relative-caret-position="170">
+              <caret line="10" column="39" lean-forward="true" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#226#227#0" expanded="true" />
+                <element signature="e#293#294#0" expanded="true" />
+                <element signature="e#432#433#0" expanded="true" />
+                <element signature="e#483#484#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -96,12 +123,12 @@
         <option value="$PROJECT_DIR$/src/View/MainMenu.java" />
         <option value="$PROJECT_DIR$/src/Controllers/MainMenuController.java" />
         <option value="$PROJECT_DIR$/src/View/Credentials.java" />
-        <option value="$PROJECT_DIR$/src/View/Gameplay.java" />
         <option value="$PROJECT_DIR$/src/Controllers/GameplayController.java" />
         <option value="$PROJECT_DIR$/src/View/Start.java" />
         <option value="$PROJECT_DIR$/src/Resources/Styles/PanelStyles.css" />
-        <option value="$PROJECT_DIR$/src/View/PlayersDialogBoxView.java" />
         <option value="$PROJECT_DIR$/src/View/Panel.java" />
+        <option value="$PROJECT_DIR$/src/View/PlayersDialogBoxView.java" />
+        <option value="$PROJECT_DIR$/src/View/Gameplay.java" />
         <option value="$PROJECT_DIR$/src/View/EnterNamesView.java" />
         <option value="$PROJECT_DIR$/src/View/StartMenu.java" />
         <option value="$PROJECT_DIR$/src/View/GameView.java" />
@@ -118,16 +145,19 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1265" />
-    <option name="y" value="146" />
-    <option name="width" value="1364" />
-    <option name="height" value="735" />
+    <option name="x" value="1358" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -150,21 +180,12 @@
               <item name="Tic-Tac-Toe-game" type="b2602c69:ProjectViewProjectNode" />
               <item name="Tic-Tac-Toe-game" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Styles" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Tic-Tac-Toe-game" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Tic-Tac-Toe-game" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="View" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -172,21 +193,21 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../JobTrack" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Tic-Tac-Toe-gameOld" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Edgaras\Desktop\Projects\Tic-Tac-Toe-game\src\View" />
-      <recent name="C:\Users\Edgaras\Desktop\Projects\Tic-Tac-Toe-game\src" />
-      <recent name="C:\Users\Edgaras\Desktop\Projects\Tic-Tac-Toe-game\src\Resources\Styles" />
-      <recent name="C:\Users\Edgaras\Desktop\Projects\Tic-Tac-Toe-game\src\Styles" />
-      <recent name="C:\Users\Edgaras\Desktop\Mokslai\Projects\JAVA projects\Tic-Tac-Toe game\src\View" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Edgaras\Desktop\Mokslai\Projects\JAVA projects\Tic-Tac-Toe game\src\View" />
       <recent name="C:\Users\Edgaras\Desktop\Mokslai\Projects\JAVA projects\Tic-Tac-Toe game" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Edgaras\Desktop\Projects\Tic-Tac-Toe-game\src\Resources\Images" />
+      <recent name="C:\Users\Edgaras\Desktop\Projects\Tic-Tac-Toe-game\src\Resources\Styles" />
+      <recent name="C:\Users\Edgaras\Desktop\Projects\Tic-Tac-Toe-game\src\View" />
+      <recent name="C:\Users\Edgaras\Desktop\Projects\Tic-Tac-Toe-game\src" />
+      <recent name="C:\Users\Edgaras\Desktop\Projects\Tic-Tac-Toe-game\src\Styles" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -690,12 +711,13 @@
       <workItem from="1563787246975" duration="106000" />
       <workItem from="1563787370799" duration="15000" />
       <workItem from="1565805413966" duration="7536000" />
-      <workItem from="1566039018831" duration="5862000" />
+      <workItem from="1566039018831" duration="5926000" />
+      <workItem from="1566123884771" duration="11002000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="223489000" />
+    <option name="totallyTimeSpent" value="234555000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -720,11 +742,11 @@
       <window_info anchor="right" id="Maven Projects" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="10" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.48667377" visible="true" weight="0.3810056" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.48667377" visible="true" weight="0.3810056" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.21531631" />
       <window_info id="Capture Tool" order="3" />
       <window_info anchor="right" id="Designer" order="4" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24253732" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24520256" />
       <window_info anchor="bottom" id="Statistic" order="7" />
       <window_info anchor="right" id="Database" order="5" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -742,32 +764,32 @@
     </layout>
     <layout-to-restore>
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.5101279" weight="0.21452513" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Capture Analysis" order="7" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.48667377" visible="true" weight="0.3810056" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.4978678" weight="0.3273743" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24253732" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Theme Preview" order="8" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.1273743" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.1273743" />
       <window_info id="Image Layers" order="6" />
       <window_info anchor="right" id="Designer" order="4" />
-      <window_info anchor="bottom" id="Statistic" order="7" />
+      <window_info id="Capture Tool" order="3" />
       <window_info id="UI Designer" order="2" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.5101279" weight="0.21452513" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49573562" weight="0.3988827" />
-      <window_info anchor="right" id="Database" order="5" />
       <window_info id="Palette&#9;" order="5" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.21531631" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5133262" side_tool="true" visible="true" weight="0.3810056" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Version Control" order="10" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info id="Capture Tool" order="3" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.4978678" weight="0.3273743" />
+      <window_info anchor="bottom" id="Statistic" order="7" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="right" id="Database" order="5" />
       <window_info anchor="right" id="Maven Projects" order="6" />
       <window_info id="Favorites" order="4" side_tool="true" />
     </layout-to-restore>
@@ -796,26 +818,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/View/Panel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="12" column="52" selection-start-line="12" selection-start-column="52" selection-end-line="12" selection-end-column="52" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/Start.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Controllers/GameplayController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2074">
@@ -847,12 +849,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1683">
           <caret line="99" column="39" lean-forward="true" selection-start-line="99" selection-start-column="39" selection-end-line="99" selection-end-column="39" />
-          <folding>
-            <element signature="e#2962#2963#0" expanded="true" />
-            <element signature="e#3035#3036#0" expanded="true" />
-            <element signature="e#3120#3121#0" expanded="true" />
-            <element signature="e#3170#3171#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1022,31 +1018,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controllers/PanelController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="16" column="52" lean-forward="true" selection-start-line="16" selection-start-column="52" selection-end-line="16" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Controllers/StartController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controllers/CredentialsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="48" lean-forward="true" selection-start-line="8" selection-start-column="48" selection-end-line="8" selection-end-column="48" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#226#227#0" expanded="true" />
-            <element signature="e#293#294#0" expanded="true" />
-            <element signature="e#432#433#0" expanded="true" />
-            <element signature="e#483#484#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1061,37 +1036,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="15" column="33" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Resources/Styles/PanelStyles.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="28" column="32" lean-forward="true" selection-start-line="28" selection-start-column="32" selection-end-line="28" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/Panel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="12" column="52" selection-start-line="12" selection-start-column="52" selection-end-line="12" selection-end-column="52" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/Credentials.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="523">
-          <caret line="96" column="4" lean-forward="true" selection-start-line="96" selection-start-column="4" selection-end-line="99" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/EnterNamesView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="65" lean-forward="true" selection-start-line="65" selection-end-line="65" />
         </state>
       </provider>
     </entry>
@@ -1116,16 +1060,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controllers/GameplayController.java">
+    <entry file="file://$PROJECT_DIR$/src/Resources/Styles/PanelStyles.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="82" column="9" lean-forward="true" selection-start-line="82" selection-start-column="9" selection-end-line="82" selection-end-column="9" />
+        <state relative-caret-position="476">
+          <caret line="28" column="32" lean-forward="true" selection-start-line="28" selection-start-column="32" selection-end-line="28" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controllers/PanelController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="16" column="52" lean-forward="true" selection-start-line="16" selection-start-column="52" selection-end-line="16" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/PlayersDialogBoxView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="83" column="38" lean-forward="true" selection-start-line="83" selection-start-column="38" selection-end-line="83" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/Panel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="829">
+          <caret line="53" column="5" lean-forward="true" selection-start-line="53" selection-start-column="5" selection-end-line="53" selection-end-column="5" />
           <folding>
-            <element signature="e#2012#2013#0" expanded="true" />
-            <element signature="e#2069#2070#0" expanded="true" />
-            <element signature="e#2112#2113#0" expanded="true" />
-            <element signature="e#2157#2158#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/small.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/o_black.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/StartMenu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="55" lean-forward="true" selection-start-line="55" selection-end-line="55" />
         </state>
       </provider>
     </entry>
@@ -1139,31 +1114,62 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/StartMenu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="355">
-          <caret line="49" column="8" selection-start-line="49" selection-start-column="8" selection-end-line="49" selection-end-column="80" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/PlayersDialogBoxView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-68">
-          <caret line="69" column="41" selection-start-line="69" selection-start-column="22" selection-end-line="69" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/View/Gameplay.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="60" column="88" lean-forward="true" selection-start-line="60" selection-start-column="88" selection-end-line="60" selection-end-column="88" />
+        <state relative-caret-position="285">
+          <caret line="79" column="35" lean-forward="true" selection-start-line="79" selection-start-column="35" selection-end-line="79" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controllers/GameplayController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1772">
+          <caret line="82" column="9" lean-forward="true" selection-start-line="82" selection-start-column="9" selection-end-line="82" selection-end-column="9" />
+          <folding>
+            <element signature="e#2012#2013#0" expanded="true" />
+            <element signature="e#2069#2070#0" expanded="true" />
+            <element signature="e#2112#2113#0" expanded="true" />
+            <element signature="e#2157#2158#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/View/GameView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="104" column="8" selection-start-line="104" selection-start-column="8" selection-end-line="104" selection-end-column="8" />
+        <state relative-caret-position="268">
+          <caret line="520" column="35" lean-forward="true" selection-start-line="520" selection-start-column="35" selection-end-line="520" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/Credentials.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-867">
+          <caret line="16" column="27" lean-forward="true" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
+          <folding>
+            <element signature="e#3221#3222#0" expanded="true" />
+            <element signature="e#3269#3270#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/EnterNamesView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1067">
+          <caret line="84" column="16" lean-forward="true" selection-start-line="84" selection-start-column="16" selection-end-line="84" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controllers/CredentialsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="39" lean-forward="true" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#226#227#0" expanded="true" />
+            <element signature="e#293#294#0" expanded="true" />
+            <element signature="e#432#433#0" expanded="true" />
+            <element signature="e#483#484#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
