@@ -3,32 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="11129068-b89c-497e-8a7e-db81bab70c53" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Tic-Tac-Toe game/View/Credentials.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tic-Tac-Toe game/View/Credentials.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Tic-Tac-Toe game/View/EnterNamesView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tic-Tac-Toe game/View/EnterNamesView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Tic-Tac-Toe game/View/GameView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tic-Tac-Toe game/View/GameView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Tic-Tac-Toe game/View/PlayersDialogBoxView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tic-Tac-Toe game/View/PlayersDialogBoxView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Tic-Tac-Toe game/View/StartMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tic-Tac-Toe game/View/StartMenu.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Tic-Tac-Toe game/View/Xsign.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Tic-Tac-Toe game/View/o.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Tic-Tac-Toe game/View/o_black.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Tic-Tac-Toe game/View/small.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Tic-Tac-Toe game/View/x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Tic-Tac-Toe game/View/x_black.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controllers/GameViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/GameViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/0sign.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/Images/0sign.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/0signBlack.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/Images/0signBlack.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/Credentials.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/Credentials.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/EnterNamesView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/EnterNamesView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/GameView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/GameView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/PlayersDialogBoxView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/PlayersDialogBoxView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/StartMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/StartMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/Xsign.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/Images/Xsign.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/XsignBlack.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/Images/XsignBlack.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/o.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/o_black.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/small.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/x_black.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <ignored path="Tic-Tac-Toe game.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -144,7 +119,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="1358" />
     <option name="y" value="-8" />
     <option name="width" value="1936" />
@@ -712,12 +687,12 @@
       <workItem from="1563787370799" duration="15000" />
       <workItem from="1565805413966" duration="7536000" />
       <workItem from="1566039018831" duration="5926000" />
-      <workItem from="1566123884771" duration="11002000" />
+      <workItem from="1566123884771" duration="11508000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="234555000" />
+    <option name="totallyTimeSpent" value="235061000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -729,7 +704,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1358" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="1358" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
