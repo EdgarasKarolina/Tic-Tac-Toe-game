@@ -1,6 +1,7 @@
 package View;
 
 
+import Controllers.GameViewController;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
@@ -8,7 +9,6 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
-import javafx.stage.Stage;
 
 
 import java.util.ArrayList;
@@ -88,21 +88,6 @@ public class GameView {
         return scnGameplay;
     }
 
-    //when button is clicked method inserts picture, disables button and adds it to setXonButton ArrayList
-    public void setXonButton(Button button)
-    {
-        button.setGraphic(new ImageView(imgWhiteX));
-        button.setDisable(true);
-        xListOfButtons.add(button);
-    }
-//when button is clicked method inserts picture, disables button and adds it to ArrayList
-    public void setOonButton(Button button)
-    {
-        button.setGraphic(new ImageView(imgWhite0));
-        button.setDisable(true);
-        oListOfButtons.add(button);
-    }
-
     public void ifXHasWon()
     {
         if (isItDraw1CheckX() == true) {
@@ -159,8 +144,6 @@ public class GameView {
             btnSquare7.setGraphic(new ImageView(imgBlackX));
             disableAllButtons();
             whoHasWonCounter = 1;
-
-
         }
         else if (isItDraw8CheckX() == true) {
             btnSquare1.setGraphic(new ImageView(imgBlackX));
@@ -169,8 +152,6 @@ public class GameView {
             disableAllButtons();
             whoHasWonCounter = 1;
         }
-
-
     }
 
     public void ifOHasWon()
@@ -239,9 +220,6 @@ public class GameView {
                 disableAllButtons();
                 whoHasWonCounter = 2;
         }
-
-
-
     }
 
     public void buttonsAction(Button button)
@@ -249,14 +227,14 @@ public class GameView {
         numberOfClicksCounter++;
         if (numberOfClicksCounter % 2 == 0)
         {
-            setXonButton(button);
+            GameViewController.setXonButton(button, imgWhiteX, xListOfButtons);
             ifXHasWon();
             playersDialogBoxView = new PlayersDialogBoxView();
             playersDialogBoxView.setWhoseTurnToPlayLabel();
         }
         else
         {
-            setOonButton(button);
+            GameViewController.setOonButton(button, imgWhite0, oListOfButtons);
             ifOHasWon();
             playersDialogBoxView = new PlayersDialogBoxView();
             playersDialogBoxView.setWhoseTurnToPlayLabel();
@@ -285,15 +263,13 @@ public class GameView {
         numberOfClicksCounter = random.nextInt(2);
     }
 
-    public int getNumberOfClicksCounter()
-    {
+    public int getNumberOfClicksCounter() {
         return numberOfClicksCounter;
     }
 
-   public int getWhoHasWonCounter()
-   {
-       return whoHasWonCounter;
-   }
+    public int getWhoHasWonCounter() {
+        return whoHasWonCounter;
+    }
 
 
     //sets whoHasWonCounter to zero
@@ -303,214 +279,144 @@ public class GameView {
         whoHasWonCounter = 0;
     }
 
-
-    //keeps a track of how many buttons are in both lists
     public int returnSizeOfArrayLists()
     {
-        int size = oListOfButtons.size() + xListOfButtons.size();
-
-        return size;
+        return oListOfButtons.size() + xListOfButtons.size();
     }
 
-    //makes empty both array lists
     public void setArrayListsToBeEmpty()
     {
         xListOfButtons.clear();
         oListOfButtons.clear();
     }
 
-   //this is used to check if arraylists does not contain buttons and that the size of both of them combined is 9
-    //this means that no one has won the game
-
     public boolean isItDraw1CheckO()
     {
-      if  (oListOfButtons.contains(btnSquare1) & (oListOfButtons.contains(btnSquare2) & (oListOfButtons.contains(btnSquare3))))
-      {
-          return true;
-      }
-
-        else {
-          return false;
-      }
+        if (oListOfButtons.contains(btnSquare1) & (oListOfButtons.contains(btnSquare2) & (oListOfButtons.contains(btnSquare3))))
+            return true;
+        else
+            return false;
     }
+
 
     public boolean isItDraw2CheckO()
     {
-        if  (oListOfButtons.contains(btnSquare4) & (oListOfButtons.contains(btnSquare5) & (oListOfButtons.contains(btnSquare6))))
-        {
+        if (oListOfButtons.contains(btnSquare4) & (oListOfButtons.contains(btnSquare5) & (oListOfButtons.contains(btnSquare6))))
             return true;
-        }
-
-        else {
+        else
             return false;
-        }
     }
 
     public boolean isItDraw3CheckO()
     {
-        if  (oListOfButtons.contains(btnSquare7) & (oListOfButtons.contains(btnSquare8) & (oListOfButtons.contains(btnSquare9))))
-        {
+        if (oListOfButtons.contains(btnSquare7) & (oListOfButtons.contains(btnSquare8) & (oListOfButtons.contains(btnSquare9))))
             return true;
-        }
-
-        else {
+        else
             return false;
-        }
     }
 
     public boolean isItDraw4CheckO()
     {
-        if  (oListOfButtons.contains(btnSquare1) & (oListOfButtons.contains(btnSquare4) & (oListOfButtons.contains(btnSquare7))))
-        {
+        if (oListOfButtons.contains(btnSquare1) & (oListOfButtons.contains(btnSquare4) & (oListOfButtons.contains(btnSquare7))))
             return true;
-        }
-
-        else {
+        else
             return false;
-        }
     }
+
     public boolean isItDraw5CheckO()
     {
-        if  (oListOfButtons.contains(btnSquare2) & (oListOfButtons.contains(btnSquare5) & (oListOfButtons.contains(btnSquare8))))
-        {
+        if (oListOfButtons.contains(btnSquare2) & (oListOfButtons.contains(btnSquare5) & (oListOfButtons.contains(btnSquare8))))
             return true;
-        }
-
-        else {
+        else
             return false;
-        }
     }
 
     public boolean isItDraw6CheckO()
     {
-        if  (oListOfButtons.contains(btnSquare3) & (oListOfButtons.contains(btnSquare6) & (oListOfButtons.contains(btnSquare9))))
-        {
+        if (oListOfButtons.contains(btnSquare3) & (oListOfButtons.contains(btnSquare6) & (oListOfButtons.contains(btnSquare9))))
             return true;
-        }
-
-        else {
+        else
             return false;
-        }
     }
 
     public boolean isItDraw7CheckO()
     {
-        if  (oListOfButtons.contains(btnSquare3) & (oListOfButtons.contains(btnSquare5) & (oListOfButtons.contains(btnSquare7))))
-        {
+        if (oListOfButtons.contains(btnSquare3) & (oListOfButtons.contains(btnSquare5) & (oListOfButtons.contains(btnSquare7))))
             return true;
-        }
-
-        else {
+        else
             return false;
-        }
     }
 
     public boolean isItDraw8CheckO()
     {
-        if  (oListOfButtons.contains(btnSquare1) & (oListOfButtons.contains(btnSquare5) & (oListOfButtons.contains(btnSquare9))))
-        {
+        if (oListOfButtons.contains(btnSquare1) & (oListOfButtons.contains(btnSquare5) & (oListOfButtons.contains(btnSquare9))))
             return true;
-        }
-
-        else {
+        else
             return false;
-        }
     }
 
     public boolean isItDraw1CheckX()
     {
-        if  (xListOfButtons.contains(btnSquare1) & (xListOfButtons.contains(btnSquare2) & (xListOfButtons.contains(btnSquare3))))
-        {
+        if (xListOfButtons.contains(btnSquare1) & (xListOfButtons.contains(btnSquare2) & (xListOfButtons.contains(btnSquare3))))
             return true;
-        }
-
-        else {
+        else
             return false;
-        }
     }
 
     public boolean isItDraw2CheckX()
     {
-        if  (xListOfButtons.contains(btnSquare4) & (xListOfButtons.contains(btnSquare5) & (xListOfButtons.contains(btnSquare6))))
-        {
+        if (xListOfButtons.contains(btnSquare4) & (xListOfButtons.contains(btnSquare5) & (xListOfButtons.contains(btnSquare6))))
             return true;
-        }
-
-        else {
+        else
             return false;
-        }
     }
 
     public boolean isItDraw3CheckX()
     {
-        if  (xListOfButtons.contains(btnSquare7) & (xListOfButtons.contains(btnSquare8) & (xListOfButtons.contains(btnSquare9))))
-        {
+        if (xListOfButtons.contains(btnSquare7) & (xListOfButtons.contains(btnSquare8) & (xListOfButtons.contains(btnSquare9))))
             return true;
-        }
-
-        else {
+        else
             return false;
-        }
     }
 
     public boolean isItDraw4CheckX()
     {
-        if  (xListOfButtons.contains(btnSquare1) & (xListOfButtons.contains(btnSquare4) & (xListOfButtons.contains(btnSquare7))))
-        {
+        if (xListOfButtons.contains(btnSquare1) & (xListOfButtons.contains(btnSquare4) & (xListOfButtons.contains(btnSquare7))))
             return true;
-        }
-
-
-        else {
+        else
             return false;
-        }
     }
+
     public boolean isItDraw5CheckX()
     {
-        if  (xListOfButtons.contains(btnSquare2) & (xListOfButtons.contains(btnSquare5) & (xListOfButtons.contains(btnSquare8))))
-        {
+        if (xListOfButtons.contains(btnSquare2) & (xListOfButtons.contains(btnSquare5) & (xListOfButtons.contains(btnSquare8))))
             return true;
-        }
-
-        else {
+        else
             return false;
-        }
     }
 
     public boolean isItDraw6CheckX()
     {
-        if  (xListOfButtons.contains(btnSquare3) & (xListOfButtons.contains(btnSquare6) & (xListOfButtons.contains(btnSquare9))))
-        {
+        if (xListOfButtons.contains(btnSquare3) & (xListOfButtons.contains(btnSquare6) & (xListOfButtons.contains(btnSquare9))))
             return true;
-        }
-
-        else {
+        else
             return false;
-        }
     }
 
     public boolean isItDraw7CheckX()
     {
-        if  (xListOfButtons.contains(btnSquare3) & (xListOfButtons.contains(btnSquare5) & (xListOfButtons.contains(btnSquare7))))
-        {
+        if (xListOfButtons.contains(btnSquare3) & (xListOfButtons.contains(btnSquare5) & (xListOfButtons.contains(btnSquare7))))
             return true;
-        }
-
-        else {
+        else
             return false;
-        }
     }
 
     public boolean isItDraw8CheckX()
     {
-        if  (xListOfButtons.contains(btnSquare1) & (xListOfButtons.contains(btnSquare5) & (xListOfButtons.contains(btnSquare9))))
-        {
+        if (xListOfButtons.contains(btnSquare1) & (xListOfButtons.contains(btnSquare5) & (xListOfButtons.contains(btnSquare9))))
             return true;
-        }
-
-        else {
+        else
             return false;
-        }
     }
 
     public void setAllButtonsToList()
@@ -528,7 +434,7 @@ public class GameView {
 
     public void disableAllButtons()
     {
-        for(Button button : allButtons)
+        for (Button button : allButtons)
             button.setDisable(true);
     }
 }
