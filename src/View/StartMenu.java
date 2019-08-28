@@ -14,15 +14,16 @@ import Controllers.EnterNamesController;
 
 public class StartMenu extends Application {
 
-    Button btnVsFriend = new Button("vs Friend");
-    Button btnVsComputer = new Button("vs Computer");
-    Button btnCredits = new Button("Credits");
-    Button btnQuit = new Button("Quit");
+    private Button btnVsFriend = new Button("vs Friend");
+    private Button btnVsComputer = new Button("vs Computer");
+    private Button btnCredits = new Button("Credits");
+    private Button btnQuit = new Button("Quit");
 
-    VBox vBoxMainMenu;
+    private Scene scnMainMenu;
+
+    private VBox vBoxMainMenu;
 
     static Stage mainStage;
-    Scene scnMainMenu;
 
     GameViewController gameViewController = new GameViewController();
     EnterNamesController enterNamesController = new EnterNamesController();
@@ -35,7 +36,7 @@ public class StartMenu extends Application {
         mainStage.show();
     }
 
-    public Scene getScnMainMenu()
+    private Scene getScnMainMenu()
     {
         vBoxMainMenu = new VBox();
 
@@ -57,7 +58,7 @@ public class StartMenu extends Application {
         return scnMainMenu;
     }
 
-    public void setButtonsOnAction()
+    private void setButtonsOnAction()
     {
         btnVsFriend.setOnAction(event -> {
             mainStage.setScene(enterNamesController.getEnterNamesView());

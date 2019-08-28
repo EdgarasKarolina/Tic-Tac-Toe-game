@@ -17,35 +17,35 @@ import java.util.Random;
 
 public class GameView {
 
-    BorderPane borderPane;
-    Scene scnGameplay;
+    private Button btnSquare1;
+    private Button btnSquare2;
+    private Button btnSquare3;
+    private Button btnSquare4;
+    private Button btnSquare5;
+    private Button btnSquare6;
+    private Button btnSquare7;
+    private Button btnSquare8;
+    private Button btnSquare9;
 
-    VBox vBoxGameplay;
-    HBox hBoxFirstLine;
-    HBox hBoxSecondLine;
-    HBox hBoxThirdLine;
+    private static ArrayList<Button> xListOfButtons = new ArrayList<>();
+    private static ArrayList<Button> oListOfButtons = new ArrayList<>();
+    private static ArrayList<Button> allButtons = new ArrayList<>();
 
-    public Button btnSquare1;
-    public Button btnSquare2;
-    public Button btnSquare3;
-    public Button btnSquare4;
-    public Button btnSquare5;
-    public Button btnSquare6;
-    public Button btnSquare7;
-    public Button btnSquare8;
-    public Button btnSquare9;
+    private Image imgWhiteX = new Image(getClass().getResourceAsStream("/Resources/Images/Xsign.png"));
+    private Image imgWhite0 = new Image(getClass().getResourceAsStream("/Resources/Images/0sign.png"));
+    private Image imgBlackX = new Image(getClass().getResourceAsStream("/Resources/Images/XsignBlack.png"));
+    private Image imgBlack0 = new Image(getClass().getResourceAsStream("/Resources/Images/0signBlack.png"));
 
-    public static ArrayList<Button> xListOfButtons = new ArrayList<>();
-    public static ArrayList<Button> oListOfButtons = new ArrayList<>();
-    public static ArrayList<Button> allButtons = new ArrayList<>();
+    private static int clicksCounter;
+    private static int winnerCounter;
 
-    Image imgWhiteX = new Image(getClass().getResourceAsStream("/Resources/Images/Xsign.png"));
-    Image imgWhite0 = new Image(getClass().getResourceAsStream("/Resources/Images/0sign.png"));
-    Image imgBlackX = new Image(getClass().getResourceAsStream("/Resources/Images/XsignBlack.png"));
-    Image imgBlack0 = new Image(getClass().getResourceAsStream("/Resources/Images/0signBlack.png"));
+    private VBox vBoxGameplay;
+    private HBox hBoxFirstLine;
+    private HBox hBoxSecondLine;
+    private HBox hBoxThirdLine;
 
-    static int numberOfClicksCounter;
-    static int whoHasWonCounter = 0;
+    private BorderPane borderPane;
+    private Scene scnGameplay;
 
     PlayersDialogBoxView playersDialogBoxView;
 
@@ -88,22 +88,36 @@ public class GameView {
         return scnGameplay;
     }
 
-    public void ifXHasWon()
+    public int getClicksCounter()
+    {
+        return clicksCounter;
+    }
+
+    public int getWhoHasWonCounter()
+    {
+        return winnerCounter;
+    }
+
+    public void setWinnerCounter(int count)
+    {
+        winnerCounter = count;
+    }
+
+    private void ifXHasWon()
     {
         if (isItDraw1CheckX() == true) {
             btnSquare1.setGraphic(new ImageView(imgBlackX));
             btnSquare2.setGraphic(new ImageView(imgBlackX));
             btnSquare3.setGraphic(new ImageView(imgBlackX));
             disableAllButtons();
-            whoHasWonCounter = 1;
-
+            setWinnerCounter(1);
 
         } else if (isItDraw2CheckX() == true) {
             btnSquare4.setGraphic(new ImageView(imgBlackX));
             btnSquare5.setGraphic(new ImageView(imgBlackX));
             btnSquare6.setGraphic(new ImageView(imgBlackX));
             disableAllButtons();
-            whoHasWonCounter = 1;
+            setWinnerCounter(1);
 
 
         } else if (isItDraw3CheckX() == true) {
@@ -111,7 +125,7 @@ public class GameView {
             btnSquare8.setGraphic(new ImageView(imgBlackX));
             btnSquare9.setGraphic(new ImageView(imgBlackX));
             disableAllButtons();
-            whoHasWonCounter = 1;
+            setWinnerCounter(1);
 
 
         } else if (isItDraw4CheckX() == true) {
@@ -119,7 +133,7 @@ public class GameView {
             btnSquare4.setGraphic(new ImageView(imgBlackX));
             btnSquare7.setGraphic(new ImageView(imgBlackX));
             disableAllButtons();
-            whoHasWonCounter = 1;
+            setWinnerCounter(1);
 
 
         } else if (isItDraw5CheckX() == true) {
@@ -127,7 +141,7 @@ public class GameView {
             btnSquare5.setGraphic(new ImageView(imgBlackX));
             btnSquare8.setGraphic(new ImageView(imgBlackX));
             disableAllButtons();
-            whoHasWonCounter = 1;
+            setWinnerCounter(1);
 
 
         } else if (isItDraw6CheckX() == true) {
@@ -135,7 +149,7 @@ public class GameView {
             btnSquare6.setGraphic(new ImageView(imgBlackX));
             btnSquare9.setGraphic(new ImageView(imgBlackX));
             disableAllButtons();
-            whoHasWonCounter = 1;
+            setWinnerCounter(1);
 
 
         } else if (isItDraw7CheckX() == true) {
@@ -143,18 +157,18 @@ public class GameView {
             btnSquare5.setGraphic(new ImageView(imgBlackX));
             btnSquare7.setGraphic(new ImageView(imgBlackX));
             disableAllButtons();
-            whoHasWonCounter = 1;
+            setWinnerCounter(1);
         }
         else if (isItDraw8CheckX() == true) {
             btnSquare1.setGraphic(new ImageView(imgBlackX));
             btnSquare5.setGraphic(new ImageView(imgBlackX));
             btnSquare9.setGraphic(new ImageView(imgBlackX));
             disableAllButtons();
-            whoHasWonCounter = 1;
+            setWinnerCounter(1);
         }
     }
 
-    public void ifOHasWon()
+    private void ifOHasWon()
     {
             if (isItDraw1CheckO() == true)
             {
@@ -162,14 +176,14 @@ public class GameView {
                 btnSquare2.setGraphic(new ImageView(imgBlack0));
                 btnSquare3.setGraphic(new ImageView(imgBlack0));
                 disableAllButtons();
-                whoHasWonCounter = 2;
+                setWinnerCounter(2);
         }
             else if (isItDraw2CheckO() == true) {
                 btnSquare4.setGraphic(new ImageView(imgBlack0));
                 btnSquare5.setGraphic(new ImageView(imgBlack0));
                 btnSquare6.setGraphic(new ImageView(imgBlack0));
                 disableAllButtons();
-                whoHasWonCounter = 2;
+                setWinnerCounter(2);
 
 
         } else if (isItDraw3CheckO() == true) {
@@ -177,7 +191,7 @@ public class GameView {
                 btnSquare8.setGraphic(new ImageView(imgBlack0));
                 btnSquare9.setGraphic(new ImageView(imgBlack0));
                 disableAllButtons();
-                whoHasWonCounter = 2;
+                setWinnerCounter(2);
 
 
         } else if (isItDraw4CheckO() == true) {
@@ -185,7 +199,7 @@ public class GameView {
                 btnSquare4.setGraphic(new ImageView(imgBlack0));
                 btnSquare7.setGraphic(new ImageView(imgBlack0));
                 disableAllButtons();
-                whoHasWonCounter = 2;
+                setWinnerCounter(2);
 
 
         } else if (isItDraw5CheckO() == true) {
@@ -193,7 +207,7 @@ public class GameView {
                 btnSquare5.setGraphic(new ImageView(imgBlack0));
                 btnSquare8.setGraphic(new ImageView(imgBlack0));
                 disableAllButtons();
-                whoHasWonCounter = 2;
+                setWinnerCounter(2);
 
 
         } else if (isItDraw6CheckO() == true) {
@@ -201,7 +215,7 @@ public class GameView {
                 btnSquare6.setGraphic(new ImageView(imgBlack0));
                 btnSquare9.setGraphic(new ImageView(imgBlack0));
                 disableAllButtons();
-                whoHasWonCounter = 2;
+                setWinnerCounter(2);
 
 
         } else if (isItDraw7CheckO() == true) {
@@ -209,7 +223,7 @@ public class GameView {
                 btnSquare5.setGraphic(new ImageView(imgBlack0));
                 btnSquare7.setGraphic(new ImageView(imgBlack0));
                 disableAllButtons();
-                whoHasWonCounter = 2;
+                setWinnerCounter(2);
 
 
         }
@@ -218,14 +232,14 @@ public class GameView {
                 btnSquare5.setGraphic(new ImageView(imgBlack0));
                 btnSquare9.setGraphic(new ImageView(imgBlack0));
                 disableAllButtons();
-                whoHasWonCounter = 2;
+                setWinnerCounter(2);
         }
     }
 
-    public void buttonsAction(Button button)
+    private void buttonsAction(Button button)
     {
-        numberOfClicksCounter++;
-        if (numberOfClicksCounter % 2 == 0)
+        clicksCounter++;
+        if (clicksCounter % 2 == 0)
         {
             GameViewController.setXonButton(button, imgWhiteX, xListOfButtons);
             ifXHasWon();
@@ -241,7 +255,7 @@ public class GameView {
         }
     }
 
-    public void setAllSquareButtonsOnAction()
+    private void setAllSquareButtonsOnAction()
     {
         btnSquare1.setOnAction(event -> buttonsAction(btnSquare1));
         btnSquare2.setOnAction(event -> buttonsAction(btnSquare2));
@@ -260,24 +274,9 @@ public class GameView {
     public void setNumberOfClicksCounterToRandomNumber()
     {
         Random random = new Random();
-        numberOfClicksCounter = random.nextInt(2);
+        clicksCounter = random.nextInt(2);
     }
 
-    public int getNumberOfClicksCounter() {
-        return numberOfClicksCounter;
-    }
-
-    public int getWhoHasWonCounter() {
-        return whoHasWonCounter;
-    }
-
-
-    //sets whoHasWonCounter to zero
-    //is used when starting or restarting the game
-    public void setWhoHasWonCounterToZero()
-    {
-        whoHasWonCounter = 0;
-    }
 
     public int returnSizeOfArrayLists()
     {
@@ -419,7 +418,7 @@ public class GameView {
             return false;
     }
 
-    public void setAllButtonsToList()
+    private void setAllButtonsToList()
     {
         allButtons.add(btnSquare1);
         allButtons.add(btnSquare2);
@@ -432,7 +431,7 @@ public class GameView {
         allButtons.add(btnSquare9);
     }
 
-    public void disableAllButtons()
+    private void disableAllButtons()
     {
         for (Button button : allButtons)
             button.setDisable(true);

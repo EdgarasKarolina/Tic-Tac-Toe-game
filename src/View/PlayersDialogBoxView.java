@@ -10,17 +10,17 @@ import Controllers.EnterNamesController;
 
 public class PlayersDialogBoxView {
 
-    Button btnReturn = new Button("Return to menu");
-    Button btnRestart = new Button("Restart");
-    Button btnQuit = new Button("Quit the game");
+    private Button btnReturn = new Button("Return to menu");
+    private Button btnRestart = new Button("Restart");
+    private Button btnQuit = new Button("Quit the game");
 
-    Label lblPlayer1Name = new Label();
-    Label lblPlayer2Name = new Label();
-    static Label lblPlayersTurn = new Label();
+    private Label lblPlayer1Name = new Label();
+    private Label lblPlayer2Name = new Label();
+    private static Label lblPlayersTurn = new Label();
 
-    VBox vBoxDialogBox = new VBox();
-    HBox hBox1 = new HBox();
-    HBox hBox2 = new HBox();
+    private VBox vBoxDialogBox = new VBox();
+    private HBox hBox1 = new HBox();
+    private HBox hBox2 = new HBox();
 
     EnterNamesController enterNamesController = new EnterNamesController();
     GameView gameView = new GameView();
@@ -56,17 +56,17 @@ public class PlayersDialogBoxView {
         return vBoxDialogBox;
     }
 
-    public void setButtonsOnAction()
+    private void setButtonsOnAction()
     {
         btnRestart.setOnAction(event -> {
 
             startMenu.setSceneToMainStage();
 
             gameView.setArrayListsToBeEmpty();
-            gameView.setWhoHasWonCounterToZero();
+            gameView.setWinnerCounter(0);
             gameView.setNumberOfClicksCounterToRandomNumber();
 
-            if (gameView.getNumberOfClicksCounter() % 2 == 0) {
+            if (gameView.getClicksCounter() % 2 == 0) {
                 lblPlayersTurn.setText(enterNamesController.getNamePlayer1() + " turn");
                 p1Starts();
             } else {
@@ -112,12 +112,12 @@ public class PlayersDialogBoxView {
         //checks if counter is even then is player nr 1 turn
         //if counter is odd then it is player nr 2 turn
         else  {
-                if (( gameView.getNumberOfClicksCounter()) % 2 == 0 ) {
+                if (( gameView.getClicksCounter()) % 2 == 0 ) {
 
                     lblPlayersTurn.setText(enterNamesController.getNamePlayer1() + " turn");
                     lblPlayersTurn.setAlignment(Pos.CENTER);
 
-                } else if (( gameView.getNumberOfClicksCounter()) % 2 != 0){
+                } else if (( gameView.getClicksCounter()) % 2 != 0){
 
                     lblPlayersTurn.setText(enterNamesController.getNamePlayer2() + " turn");
                     lblPlayersTurn.setAlignment(Pos.CENTER);

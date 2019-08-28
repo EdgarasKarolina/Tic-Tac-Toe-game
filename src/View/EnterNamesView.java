@@ -10,29 +10,28 @@ import javafx.scene.layout.VBox;
 
 public class EnterNamesView {
 
-    Scene scnCredentials;
+    private Button btnContinue = new Button("Continue");
+    private Button btnBack = new Button("Go back");
 
-    VBox vBox;
-    HBox hBox;
-    HBox hBox2;
-    HBox hBox3;
+    private Label lblInsertNames = new Label("Insert players names");
+    private Label lblPlayer1Name = new Label("Player 1 name");
+    private Label lblPlayer2Name = new Label("Player 2 name");
 
-    Label lblInsertNames = new Label("Insert players names");
-    Label lblPlayer1Name = new Label("Player 1 name");
-    Label lblPlayer2Name = new Label("Player 2 name");
+    private static TextField txtPlayer1Name = new TextField();
+    private static TextField txtPlayer2Name = new TextField();
 
-    static TextField txtPlayer1Name = new TextField();
-    static TextField txtPlayer2Name = new TextField();
+    private final String msgWarning = "Insert Name";
 
-    Button btnContinue = new Button("Continue");
-    Button btnBack = new Button("Go back");
+    private VBox vBox;
+    private HBox hBox;
+    private HBox hBox2;
+    private HBox hBox3;
 
-    String msgWarning = "Insert Name";
+    private Scene scnCredentials;
 
     GameView gameView = new GameView();
     PlayersDialogBoxView playersDialogBoxView;
     static StartMenu startMenu = new StartMenu();
-
 
     public Scene getScnCredentials()
     {
@@ -67,7 +66,7 @@ public class EnterNamesView {
         return scnCredentials;
     }
 
-    public void setButtonsOnAction()
+    private void setButtonsOnAction()
     {
         btnContinue.setOnAction(event -> {
 
@@ -85,11 +84,11 @@ public class EnterNamesView {
             else
                 startMenu.setSceneToMainStage();
                 gameView.setArrayListsToBeEmpty();
-                gameView.setWhoHasWonCounterToZero();
+                gameView.setWinnerCounter(0);
                 gameView.setNumberOfClicksCounterToRandomNumber();
                 playersDialogBoxView = new PlayersDialogBoxView();
 
-                if (gameView.getNumberOfClicksCounter() % 2 == 0)
+                if (gameView.getClicksCounter() % 2 == 0)
                     playersDialogBoxView.p1Starts();
 
                 else
