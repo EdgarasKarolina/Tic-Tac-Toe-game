@@ -1,30 +1,36 @@
 package Controllers;
 
 import View.Credentials;
-import View.Start;
 import javafx.scene.Scene;
 
+/**
+ * Created by Edgaras on 18/07/2016.
+ */
 public class CredentialsController {
+
+    //Should use/have view instance and player model instance
 
     Credentials credentials = new Credentials();
 
-    public void setCredentialsToStage()
+    public Scene getCredentials()
     {
-        Start.setSceneToStage(credentials.getCredentials());
+
+        return credentials.getScnCredentials();
     }
 
-    public Scene getCredentialsScene()
+    public String getNamePlayer1()
     {
-        return credentials.getCredentials();
+        String name;
+        name = credentials.getPlayer1Name();
+
+        return name;
     }
 
-    public String getPlayer1Name()
+    public String getNamePlayer2()
     {
-        return credentials.getPlayer1Name();
-    }
+        String name;
+        name = credentials.getPlayer2Name();
 
-    public String getPlayer2Name()
-    {
-        return credentials.getPlayer2Name();
+        return name;
     }
 }

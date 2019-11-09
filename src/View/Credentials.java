@@ -1,37 +1,45 @@
 package View;
 
-import Controllers.GameplayController;
-import Controllers.MainMenuController;
-import Model.TTTButton;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 
+
 public class Credentials {
 
-    Scene scnCredentials;
+    private Button btnContinue = new Button("Continue");
+    private Button btnBack = new Button("Go back");
 
-    VBox vBox = new VBox();
-    HBox hBox = new HBox();
-    HBox hBox2 = new HBox();
-    HBox hBox3 = new HBox();
+    private Label lblInsertNames = new Label("Insert players names");
+    private Label lblPlayer1Name = new Label("Player 1 name");
+    private Label lblPlayer2Name = new Label("Player 2 name");
 
-    Label lblInsertNames = new Label("Insert players names");
-    Label lblPlayer1Name = new Label("Player 1 name");
-    Label lblPlayer2Name = new Label("Player 2 name");
+    private static TextField txtPlayer1Name = new TextField();
+    private static TextField txtPlayer2Name = new TextField();
 
-    static TextField txtPlayer1Name = new TextField();
-    static TextField txtPlayer2Name = new TextField();
+    private final String msgWarning = "Insert Name";
 
-    TTTButton btnContinue = new TTTButton("Continue");
-    TTTButton btnBack = new TTTButton("Go back");
+    private VBox vBox;
+    private HBox hBox;
+    private HBox hBox2;
+    private HBox hBox3;
 
-    String msgWarning = "Insert Name";
+    private Scene scnCredentials;
 
-    public Scene getCredentials()
+    Gameplay gameplay = new Gameplay();
+    Panel panel;
+    static Start start = new Start();
+
+    public Scene getScnCredentials()
     {
+        vBox = new VBox();
+        hBox = new HBox();
+        hBox2 = new HBox();
+        hBox3 = new HBox();
+
         scnCredentials = new Scene(vBox, 280, 200);
         scnCredentials.getStylesheets().add("Resources/Styles/CredentialsStyles.css");
 
@@ -51,15 +59,17 @@ public class Credentials {
         hBox2.getChildren().addAll(lblPlayer2Name, txtPlayer2Name);
         hBox3.getChildren().addAll( btnBack, btnContinue);
 
-        vBox.getChildren().addAll(lblInsertNames, hBox,hBox2, hBox3);
+        vBox.getChildren().addAll(lblInsertNames, hBox, hBox2, hBox3);
+
         this.setButtonsOnAction();
 
         return scnCredentials;
     }
 
-    public void setButtonsOnAction()
+    private void setButtonsOnAction()
     {
         btnContinue.setOnAction(event -> {
+
             if (txtPlayer1Name.getText().trim().equals("") || txtPlayer2Name.getText().trim().equals(""))
             {
                 txtPlayer1Name.setPromptText(msgWarning);
@@ -72,19 +82,20 @@ public class Credentials {
                 txtPlayer2Name.setPromptText(msgWarning);
 
             else
-                GameplayController.gameplayController.setGameplayToStage();
-                GameplayController.gameplayController.ClearSquareButtons();
-                GameplayController.gameplayController.setRandomTurnsCounter();
+                start.setSceneToMainStage();
+                gameplay.setArrayListsToBeEmpty();
+                gameplay.setWinnerCounter(0);
+                gameplay.setNumberOfClicksCounterToRandomNumber();
+                panel = new Panel();
 
-                if (GameplayController.turnsCount % 2 == 0)
-                    GameplayController.gameplayController.player1Starts();
+                if (gameplay.getClicksCounter() % 2 == 0)
+                    panel.p1Starts();
+
                 else
-                    GameplayController.gameplayController.player2Starts();
+                    panel.p2Starts();
         });
 
-        btnBack.setOnAction(event -> {
-            MainMenuController.mainMenuController.setMainMenuToStage();
-        });
+        btnBack.setOnAction(event -> start.setMainSceneToStage());
     }
 
     public String getPlayer1Name()
