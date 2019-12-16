@@ -28,7 +28,7 @@ public class Start extends Application {
     CredentialsController credentialsController = new CredentialsController();
 
     @Override
-    public void start(Stage primaryStage) throws Exception {
+    public void start(Stage primaryStage) {
         mainStage = new Stage();
         mainStage.setScene(getScnMainMenu());
         mainStage.show();

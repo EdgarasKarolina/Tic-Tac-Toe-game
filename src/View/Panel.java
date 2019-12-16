@@ -9,7 +9,6 @@ import Controllers.CredentialsController;
 
 
 public class Panel {
-
     private Button btnReturn = new Button("Return to menu");
     private Button btnRestart = new Button("Restart");
     private Button btnQuit = new Button("Quit the game");
@@ -26,7 +25,6 @@ public class Panel {
     Gameplay gameplay = new Gameplay();
 
     static Start start = new Start();
-
 
     public VBox getPanel() {
         vBoxDialogBox.getStylesheets().add("Resources/Styles/PanelStyles.css");
@@ -57,7 +55,6 @@ public class Panel {
 
     private void setButtonsOnAction() {
         btnRestart.setOnAction(event -> {
-
             start.setSceneToMainStage();
 
             gameplay.setArrayListsToBeEmpty();
@@ -66,10 +63,10 @@ public class Panel {
 
             if (gameplay.getClicksCounter() % 2 == 0) {
                 lblPlayersTurn.setText(credentialsController.getNamePlayer1() + " turn");
-                p1Starts();
+                player1Turn();
             } else {
                 lblPlayersTurn.setText(credentialsController.getNamePlayer2() + " turn");
-                p2Starts();
+                player2Turn();
             }
         });
 
@@ -83,46 +80,28 @@ public class Panel {
     }
 
    public void setWhoseTurnToPlayLabel() {
-
-        if (gameplay.getWhoHasWonCounter() == 1) {
+        if (gameplay.getWinnerCounter() == 1) {
             lblPlayersTurn.setText( credentialsController.getNamePlayer2() + " has won");
-        } else if (gameplay.getWhoHasWonCounter() == 2) {
+        } else if (gameplay.getWinnerCounter() == 2) {
                 lblPlayersTurn.setText( credentialsController.getNamePlayer1() + " has won");
-        }
-        else if (gameplay.returnSizeOfArrayLists() >= 9 && gameplay.isItDraw1CheckX() == false
-                && gameplay.isItDraw2CheckX() == false && gameplay.isItDraw3CheckX() == false
-                && gameplay.isItDraw4CheckX() == false && gameplay.isItDraw5CheckX() == false
-                && gameplay.isItDraw6CheckX() == false && gameplay.isItDraw7CheckX() == false
-                && gameplay.isItDraw8CheckX() == false && gameplay.isItDraw1CheckO() == false
-                && gameplay.isItDraw2CheckO() == false && gameplay.isItDraw3CheckO() == false
-                && gameplay.isItDraw4CheckO() == false && gameplay.isItDraw5CheckO() == false
-                && gameplay.isItDraw6CheckO() == false && gameplay.isItDraw7CheckO() == false
-                && gameplay.isItDraw8CheckO() == false )
-        {
+        } else if (gameplay.returnSizeOfArrayLists() >= 9 && !gameplay.getIsWinner()) {
             lblPlayersTurn.setText("Draw");
-        }
-
-        //checks if counter is even then is player nr 1 turn
-        //if counter is odd then it is player nr 2 turn
-        else  {
-                if (( gameplay.getClicksCounter()) % 2 == 0 ) {
-
+        } else {
+                if ((gameplay.getClicksCounter()) % 2 == 0) {
                     lblPlayersTurn.setText(credentialsController.getNamePlayer1() + " turn");
                     lblPlayersTurn.setAlignment(Pos.CENTER);
-
-                } else if (( gameplay.getClicksCounter()) % 2 != 0){
-
+                } else if ((gameplay.getClicksCounter()) % 2 != 0) {
                     lblPlayersTurn.setText(credentialsController.getNamePlayer2() + " turn");
                     lblPlayersTurn.setAlignment(Pos.CENTER);
                 }
             }
         }
 
-    public void p1Starts() {
+    public void player1Turn() {
     lblPlayersTurn.setText(credentialsController.getNamePlayer1() + " turn");
     }
 
-    public void p2Starts() {
+    public void player2Turn() {
         lblPlayersTurn.setText(credentialsController.getNamePlayer2() + " turn");
     }
 }

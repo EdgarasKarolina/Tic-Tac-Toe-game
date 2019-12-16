@@ -1,5 +1,6 @@
 package View;
 
+import Utilities.Validation;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -53,11 +54,9 @@ public class Credentials {
         btnBack.getStyleClass().add("credentials-button");
 
         vBox.getStyleClass().add("credentials-vbox");
-
         hBox.getChildren().addAll(lblPlayer1Name, txtPlayer1Name);
         hBox2.getChildren().addAll(lblPlayer2Name, txtPlayer2Name);
         hBox3.getChildren().addAll( btnBack, btnContinue);
-
         vBox.getChildren().addAll(lblInsertNames, hBox, hBox2, hBox3);
 
         this.setButtonsOnAction();
@@ -67,30 +66,26 @@ public class Credentials {
 
     private void setButtonsOnAction() {
         btnContinue.setOnAction(event -> {
-
-            if (txtPlayer1Name.getText().trim().equals("") || txtPlayer2Name.getText().trim().equals(""))
-            {
+            if (Validation.validateName(txtPlayer1Name) || Validation.validateName(txtPlayer2Name)) {
                 txtPlayer1Name.setPromptText(msgWarning);
                 txtPlayer2Name.setPromptText(msgWarning);
-            }
-            else if (txtPlayer1Name.getText().trim().equals(""))
+            } else if (Validation.validateName(txtPlayer1Name)) {
                 txtPlayer1Name.setPromptText(msgWarning);
-
-            else if (txtPlayer2Name.getText().trim().equals(""))
+            } else if (Validation.validateName(txtPlayer2Name)) {
                 txtPlayer2Name.setPromptText(msgWarning);
-
-            else
+            } else {
                 start.setSceneToMainStage();
                 gameplay.setArrayListsToBeEmpty();
                 gameplay.setWinnerCounter(0);
                 gameplay.setNumberOfClicksCounterToRandomNumber();
                 panel = new Panel();
 
-                if (gameplay.getClicksCounter() % 2 == 0)
-                    panel.p1Starts();
-
-                else
-                    panel.p2Starts();
+                if (gameplay.getClicksCounter() % 2 == 0) {
+                    panel.player1Turn();
+                } else {
+                    panel.player2Turn();
+                }
+            }
         });
 
         btnBack.setOnAction(event -> start.setMainSceneToStage());
