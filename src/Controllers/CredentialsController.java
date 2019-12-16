@@ -8,29 +8,17 @@ import javafx.scene.Scene;
  */
 public class CredentialsController {
 
-    //Should use/have view instance and player model instance
-
     Credentials credentials = new Credentials();
 
-    public Scene getCredentials()
-    {
-
+    public Scene getCredentials() {
         return credentials.getScnCredentials();
     }
 
-    public String getNamePlayer1()
-    {
-        String name;
-        name = credentials.getPlayer1Name();
-
-        return name;
+    public String getNamePlayer1() {
+        return credentials.getPlayer1Name();
     }
 
-    public String getNamePlayer2()
-    {
-        String name;
-        name = credentials.getPlayer2Name();
-
-        return name;
+    public String getNamePlayer2() {
+        return credentials.getPlayer2Name();
     }
 }

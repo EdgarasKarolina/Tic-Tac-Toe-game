@@ -28,8 +28,7 @@ public class Panel {
     static Start start = new Start();
 
 
-    public VBox getPanel()
-    {
+    public VBox getPanel() {
         vBoxDialogBox.getStylesheets().add("Resources/Styles/PanelStyles.css");
         vBoxDialogBox.getStyleClass().add("panel-vbox");
 
@@ -56,8 +55,7 @@ public class Panel {
         return vBoxDialogBox;
     }
 
-    private void setButtonsOnAction()
-    {
+    private void setButtonsOnAction() {
         btnRestart.setOnAction(event -> {
 
             start.setSceneToMainStage();
@@ -84,17 +82,13 @@ public class Panel {
         });
     }
 
-   public void setWhoseTurnToPlayLabel()
-   {
+   public void setWhoseTurnToPlayLabel() {
 
         if (gameplay.getWhoHasWonCounter() == 1) {
             lblPlayersTurn.setText( credentialsController.getNamePlayer2() + " has won");
-
-
-        } else if (gameplay.getWhoHasWonCounter() == 2){
+        } else if (gameplay.getWhoHasWonCounter() == 2) {
                 lblPlayersTurn.setText( credentialsController.getNamePlayer1() + " has won");
-            }
-
+        }
         else if (gameplay.returnSizeOfArrayLists() >= 9 && gameplay.isItDraw1CheckX() == false
                 && gameplay.isItDraw2CheckX() == false && gameplay.isItDraw3CheckX() == false
                 && gameplay.isItDraw4CheckX() == false && gameplay.isItDraw5CheckX() == false
@@ -105,7 +99,6 @@ public class Panel {
                 && gameplay.isItDraw6CheckO() == false && gameplay.isItDraw7CheckO() == false
                 && gameplay.isItDraw8CheckO() == false )
         {
-
             lblPlayersTurn.setText("Draw");
         }
 
@@ -125,13 +118,11 @@ public class Panel {
             }
         }
 
-    public void p1Starts()
-{
+    public void p1Starts() {
     lblPlayersTurn.setText(credentialsController.getNamePlayer1() + " turn");
-}
+    }
 
-    public void p2Starts()
-    {
+    public void p2Starts() {
         lblPlayersTurn.setText(credentialsController.getNamePlayer2() + " turn");
     }
 }

@@ -28,17 +28,14 @@ public class Start extends Application {
     CredentialsController credentialsController = new CredentialsController();
 
     @Override
-    public void start(Stage primaryStage) throws Exception
-    {
+    public void start(Stage primaryStage) throws Exception {
         mainStage = new Stage();
         mainStage.setScene(getScnMainMenu());
         mainStage.show();
     }
 
-    private Scene getScnMainMenu()
-    {
+    private Scene getScnMainMenu() {
         vBoxMainMenu = new VBox();
-
         scnMainMenu = new Scene(vBoxMainMenu, 200, 300);
 
         btnVsFriend.getStyleClass().add("main-menu-button");
@@ -57,8 +54,7 @@ public class Start extends Application {
         return scnMainMenu;
     }
 
-    private void setButtonsOnAction()
-    {
+    private void setButtonsOnAction() {
         btnVsFriend.setOnAction(event -> {
             mainStage.setScene(credentialsController.getCredentials());
         });
@@ -76,13 +72,11 @@ public class Start extends Application {
         });
     }
 
-    public void setSceneToMainStage()
-    {
+    public void setSceneToMainStage() {
         mainStage.setScene(gameplayController.getGameViewStage());
     }
 
-    public void setMainSceneToStage()
-    {
+    public void setMainSceneToStage() {
         mainStage.setScene(getScnMainMenu());
     }
 }

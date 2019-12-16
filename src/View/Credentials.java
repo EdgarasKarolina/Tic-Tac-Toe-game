@@ -33,8 +33,7 @@ public class Credentials {
     Panel panel;
     static Start start = new Start();
 
-    public Scene getScnCredentials()
-    {
+    public Scene getScnCredentials() {
         vBox = new VBox();
         hBox = new HBox();
         hBox2 = new HBox();
@@ -66,8 +65,7 @@ public class Credentials {
         return scnCredentials;
     }
 
-    private void setButtonsOnAction()
-    {
+    private void setButtonsOnAction() {
         btnContinue.setOnAction(event -> {
 
             if (txtPlayer1Name.getText().trim().equals("") || txtPlayer2Name.getText().trim().equals(""))
@@ -98,13 +96,11 @@ public class Credentials {
         btnBack.setOnAction(event -> start.setMainSceneToStage());
     }
 
-    public String getPlayer1Name()
-    {
+    public String getPlayer1Name() {
         return  txtPlayer1Name.getText();
     }
 
-    public String getPlayer2Name()
-    {
+    public String getPlayer2Name() {
         return  txtPlayer2Name.getText();
     }
 }
