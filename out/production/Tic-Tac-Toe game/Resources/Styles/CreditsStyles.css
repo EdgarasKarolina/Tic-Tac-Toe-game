@@ -1,0 +1,21 @@
+.credits-button{
+    -fx-min-height: 40px;
+    -fx-min-width: 130px;
+    -fx-font-family: Serif;
+    -fx-font-size: 20px;
+    -fx-background-color: lightyellow;
+    -fx-effect: dropshadow(one-pass-box, black, 15 , 0.0 , 2 , 0)
+}
+
+.credits-label{
+    -fx-min-height: 250px;
+    -fx-min-width: 190px;
+    -fx-font-family: Serif;
+    -fx-font-size: 15px;
+    -fx-padding: 10px 10px 10px 57px;
+}
+
+.credits-vbox{
+    -fx-alignment: center;
+    -fx-background-color: lightblue
+}

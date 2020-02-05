@@ -25,6 +25,7 @@ public class Start extends Application {
 
     GameplayController gameplayController = new GameplayController();
     CredentialsController credentialsController = new CredentialsController();
+    Credits credits = new Credits();
 
     @Override
     public void start(Stage primaryStage) {
@@ -58,7 +59,7 @@ public class Start extends Application {
         });
 
         btnCredits.setOnAction(event -> {
-            //ToDo
+            mainStage.setScene(credits.getCredits());
         });
 
         btnQuit.setOnAction(event -> {
