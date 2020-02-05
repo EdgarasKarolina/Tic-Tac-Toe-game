@@ -13,8 +13,7 @@ import Controllers.CredentialsController;
 
 public class Start extends Application {
 
-    private Button btnVsFriend = new Button("vs Friend");
-    private Button btnVsComputer = new Button("vs Computer");
+    private Button btnPlay = new Button("Play");
     private Button btnCredits = new Button("Credits");
     private Button btnQuit = new Button("Quit");
 
@@ -38,14 +37,13 @@ public class Start extends Application {
         vBoxMainMenu = new VBox();
         scnMainMenu = new Scene(vBoxMainMenu, 200, 300);
 
-        btnVsFriend.getStyleClass().add("main-menu-button");
-        btnVsComputer.getStyleClass().add("main-menu-button");
+        btnPlay.getStyleClass().add("main-menu-button");
         btnCredits.getStyleClass().add("main-menu-button");
         btnQuit.getStyleClass().add("main-menu-button");
         vBoxMainMenu.getStyleClass().add("main-menu-vbox");
 
         scnMainMenu.getStylesheets().add("Resources/Styles/MainMenuStyles.css");
-        vBoxMainMenu.getChildren().addAll(btnVsFriend, btnVsComputer, btnCredits, btnQuit);
+        vBoxMainMenu.getChildren().addAll(btnPlay, btnCredits, btnQuit);
         vBoxMainMenu.setAlignment(Pos.CENTER);
         vBoxMainMenu.setSpacing(20);
 
@@ -55,12 +53,8 @@ public class Start extends Application {
     }
 
     private void setButtonsOnAction() {
-        btnVsFriend.setOnAction(event -> {
+        btnPlay.setOnAction(event -> {
             mainStage.setScene(credentialsController.getCredentials());
-        });
-
-        btnVsComputer.setOnAction(event -> {
-            //ToDo
         });
 
         btnCredits.setOnAction(event -> {
