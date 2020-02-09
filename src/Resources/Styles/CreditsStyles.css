@@ -12,7 +12,8 @@
     -fx-min-width: 190px;
     -fx-font-family: Serif;
     -fx-font-size: 15px;
-    -fx-padding: 10px 10px 10px 57px;
+    -fx-text-alignment: center;
+    -fx-font-weight: bold;
 }
 
 .credits-vbox{

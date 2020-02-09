@@ -3,17 +3,16 @@ package View;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
 
 
 public class Credits {
 
-    private BorderPane borderPane = new BorderPane();
     private Scene scnCredits;
     private VBox vBoxCredits;
     private Button btnBack = new Button("Back");
-    private Label lblCredits = new Label("Tic Tac Toe \n\n CREDITS \n\n CODE WRITER \n Edgaras Kazlauskas");
+    private Label lblCredits = new Label("Tic Tac Toe \n\n CREDITS" +
+            " \n\n\n CODE WRITER \n Edgaras Kazlauskas \n \n © 2018 Edgaras Kazlauskas");
 
     static Start start = new Start();
 
